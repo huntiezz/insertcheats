@@ -1,0 +1,654 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Products | Sulphated</title>
+    <link rel="icon" href="/assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/site.css" />
+    <link rel="stylesheet" href="/css/extra.css" />
+  </head>
+  <body>
+    <div class="min-h-screen bg-theme-primary relative overflow-hidden">
+      <div class="ux-ambient-bg" aria-hidden="true"></div>
+      <header id="header" class="at-top">
+        <nav>
+          <div id="navbar-logo">
+            <a href="/"
+              ><img alt="Sulphated" class="ins-logo-img" src="/assets/logo-CulUdTix.png"
+            /></a>
+          </div>
+          <div id="navbar-links">
+            <a href="/products">Products</a><a href="/#faq">FAQ</a
+            ><a href="https://discord.gg/rGMkAXZtvW" target="_blank" rel="noreferrer">Discord</a
+            ><a href="/status">Status</a
+            ><a href="https://discord.gg/rGMkAXZtvW" target="_blank" rel="noreferrer">Support</a>
+          </div>
+          <div id="navbar-buttons" class="hidden md:flex">
+            <div class="relative flex items-center">
+              <div
+                class="search-pop absolute right-0 top-0 h-8 bg-gray-900 border border-gray-700 rounded-md backdrop-blur-md transition-all duration-300 ease-out overflow-hidden w-0 opacity-0"
+              >
+                <form class="h-full flex items-center">
+                  <div class="flex items-center w-full h-full px-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-search w-4 h-4 text-gray-300 flex-shrink-0"
+                    >
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <path d="m21 21-4.3-4.3"></path></svg
+                    ><input
+                      placeholder="Search products..."
+                      class="flex-1 bg-transparent text-gray-50 text-sm placeholder:text-gray-300 border-none outline-none ml-2 min-w-0"
+                      type="text"
+                      value=""
+                    />
+                    <div
+                      class="shortcut -mr-1 hidden justify-end gap-0.5 whitespace-nowrap text-gray-300 text-xs md:flex"
+                    >
+                      <kbd
+                        class="flex h-5 min-w-5 items-center justify-center rounded border border-gray-700 bg-gray-800 px-1"
+                        >Esc</kbd
+                      >
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <button
+                class="gap-2 whitespace-nowrap font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 shadow-xs hover:shadow-md active:shadow-xs transform active:scale-[0.98] text-sm bg-transparent border border-gray-300 dark:border-white/20 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-white/10 h-8 w-8 p-0 rounded-md flex items-center justify-center transition-all duration-300 relative z-10 opacity-100"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-search w-4 h-4"
+                >
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.3-4.3"></path>
+                </svg>
+              </button>
+            </div>
+            <div class="relative">
+              <button
+                class="gap-2 whitespace-nowrap font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 shadow-xs hover:shadow-md active:shadow-xs transform active:scale-[0.98] bg-transparent border border-gray-300 dark:border-white/20 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-white/10 h-8 w-8 md:w-auto md:px-3 p-0 md:py-2 rounded-md flex items-center justify-center md:gap-2 text-sm tracking-20-smaller transition-all duration-300 relative"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-shopping-cart w-4 h-4"
+                >
+                  <circle cx="8" cy="21" r="1"></circle>
+                  <circle cx="19" cy="21" r="1"></circle>
+                  <path
+                    d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+                  ></path></svg
+                ><span class="hidden md:inline">Cart</span>
+              </button>
+            </div>
+            <a
+              id="get-started-btn"
+              class="ins-get-started-btn"
+              href="https://discord.gg/rGMkAXZtvW"
+              target="_blank"
+              rel="noreferrer"
+              ><span>Dashboard</span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-arrow-right w-[14px] h-[14px] ml-1"
+              >
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path></svg
+            ></a>
+          </div>
+          <div class="flex md:hidden items-center gap-2">
+            <div class="relative flex items-center">
+              <div
+                class="search-pop absolute right-0 top-0 h-8 bg-gray-900 border border-gray-700 rounded-md backdrop-blur-md transition-all duration-300 ease-out overflow-hidden w-0 opacity-0"
+              >
+                <form class="h-full flex items-center">
+                  <div class="flex items-center w-full h-full px-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-search w-4 h-4 text-gray-300 flex-shrink-0"
+                    >
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <path d="m21 21-4.3-4.3"></path></svg
+                    ><input
+                      placeholder="Search products..."
+                      class="flex-1 bg-transparent text-gray-50 text-sm placeholder:text-gray-300 border-none outline-none ml-2 min-w-0"
+                      type="text"
+                      value=""
+                    />
+                    <div
+                      class="shortcut -mr-1 hidden justify-end gap-0.5 whitespace-nowrap text-gray-300 text-xs md:flex"
+                    >
+                      <kbd
+                        class="flex h-5 min-w-5 items-center justify-center rounded border border-gray-700 bg-gray-800 px-1"
+                        >Esc</kbd
+                      >
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <button
+                class="gap-2 whitespace-nowrap font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 shadow-xs hover:shadow-md active:shadow-xs transform active:scale-[0.98] text-sm bg-transparent border border-gray-300 dark:border-white/20 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-white/10 h-8 w-8 p-0 rounded-md flex items-center justify-center transition-all duration-300 relative z-10 opacity-100"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-search w-4 h-4"
+                >
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.3-4.3"></path>
+                </svg>
+              </button>
+            </div>
+            <div class="relative">
+              <button
+                class="gap-2 whitespace-nowrap font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 shadow-xs hover:shadow-md active:shadow-xs transform active:scale-[0.98] bg-transparent border border-gray-300 dark:border-white/20 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-white/10 h-8 w-8 md:w-auto md:px-3 p-0 md:py-2 rounded-md flex items-center justify-center md:gap-2 text-sm tracking-20-smaller transition-all duration-300 relative"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-shopping-cart w-4 h-4"
+                >
+                  <circle cx="8" cy="21" r="1"></circle>
+                  <circle cx="19" cy="21" r="1"></circle>
+                  <path
+                    d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+                  ></path></svg
+                ><span class="hidden md:inline">Cart</span>
+              </button>
+            </div>
+            <button
+              class="gap-2 whitespace-nowrap font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 transform active:scale-[0.98] hover:text-accent-foreground shadow-none hover:shadow-none active:shadow-none text-sm bg-transparent border border-white/15 text-white hover:bg-white/10 h-8 w-8 p-0 rounded-md flex items-center justify-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-menu w-5 h-5"
+              >
+                <line x1="4" x2="20" y1="12" y2="12"></line>
+                <line x1="4" x2="20" y1="6" y2="6"></line>
+                <line x1="4" x2="20" y1="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+        </nav>
+      </header>
+      <div id="mobile-menu" class="mobile-menu">
+        <a href="/products">Products</a><a href="/#faq">FAQ</a
+        ><a href="https://discord.gg/rGMkAXZtvW" target="_blank" rel="noreferrer">Discord</a
+        ><a href="/status">Status</a
+        ><a href="https://discord.gg/rGMkAXZtvW" target="_blank" rel="noreferrer">Support</a>
+      </div>
+      <section class="ins-allprod">
+        <div class="featured-products ins-allprod-header">
+          <div class="section-pill aos-init aos-animate" data-aos="fade-up">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+              ></path>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+              <line x1="12" y1="22.08" x2="12" y2="12"></line></svg
+            ><span>Catalog</span>
+          </div>
+          <h1 class="section-title ins-allprod-title aos-init aos-animate" data-aos="fade-up">
+            Products
+          </h1>
+          <p class="section-subtitle aos-init aos-animate" data-aos="fade-up">
+            Trusted cheats for every supported game.
+          </p>
+        </div>
+        <div class="ins-allprod-panel">
+          <div class="ins-allprod-tabs">
+            <button type="button" class="ins-allprod-tab is-active">All Products</button
+            ><button type="button" class="ins-allprod-tab">Fortnite</button
+            ><button type="button" class="ins-allprod-tab">Spoofer</button
+            ><button type="button" class="ins-allprod-tab">Valorant</button
+            ><button type="button" class="ins-allprod-tab">Rainbow Six Seige</button
+            ><button type="button" class="ins-allprod-tab">Black Ops 7</button
+            ><button type="button" class="ins-allprod-tab">Arc Raiders</button
+            ><button type="button" class="ins-allprod-tab">Rust</button
+            ><button type="button" class="ins-allprod-tab">Apex Legends</button>
+          </div>
+          <div class="ins-prod-grid">
+            <div
+              class="ins-prod-card aos-init aos-animate"
+              data-aos="fade-up"
+              data-aos-duration="400"
+              data-aos-delay="0"
+            >
+              <a class="ins-prod-image" href="/product?id=fn"
+                ><img
+                  alt="Fortnite Private"
+                  src="/assets/img/4c9d1361-65ad-4fe0-a764-57be6b8a2421.png"
+              /></a>
+              <div class="ins-prod-info">
+                <div class="ins-prod-title-row">
+                  <h3 class="ins-prod-title">Fortnite Private</h3>
+                  <span class="ins-prod-badge">Fortnite</span>
+                </div>
+                <div class="ins-prod-price-block"><span class="ins-prod-price">€10.99</span></div>
+                <a class="ins-prod-buy" href="/product?id=fn"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M14.665 2.33a.75.75 0 0 1 1.006.335l2.201 4.402c1.353.104 2.202.37 2.75 1.047c.9 1.114.541 2.79-.177 6.143l-.429 2c-.487 2.273-.73 3.409-1.555 4.076S16.474 21 14.15 21h-4.3c-2.324 0-3.486 0-4.31-.667c-.826-.667-1.07-1.803-1.556-4.076l-.429-2c-.718-3.353-1.078-5.029-.177-6.143c.548-.678 1.397-.943 2.75-1.047l2.201-4.402a.75.75 0 0 1 1.342.67L7.836 6.99Q8.559 7 9.422 7h5.156q.863-.001 1.586.005l-1.835-3.67a.75.75 0 0 1 .336-1.006M9 11.25a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0v-4a.75.75 0 0 1 .75-.75m6 0a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0v-4a.75.75 0 0 1 .75-.75"
+                    ></path></svg
+                  >Buy Now</a
+                >
+              </div>
+            </div>
+            <div
+              class="ins-prod-card aos-init aos-animate"
+              data-aos="fade-up"
+              data-aos-duration="400"
+              data-aos-delay="50"
+            >
+              <a class="ins-prod-image" href="/product?id=r6-lite"
+                ><img alt="R6 Lite" src="/assets/img/8720e6ca-8a57-4778-8058-c3dcd9cb3e89.png"
+              /></a>
+              <div class="ins-prod-info">
+                <div class="ins-prod-title-row">
+                  <h3 class="ins-prod-title">R6 Lite</h3>
+                  <span class="ins-prod-badge">Rainbow Six Seige</span>
+                </div>
+                <div class="ins-prod-price-block"><span class="ins-prod-price">€9.99</span></div>
+                <a class="ins-prod-buy" href="/product?id=r6-lite"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M14.665 2.33a.75.75 0 0 1 1.006.335l2.201 4.402c1.353.104 2.202.37 2.75 1.047c.9 1.114.541 2.79-.177 6.143l-.429 2c-.487 2.273-.73 3.409-1.555 4.076S16.474 21 14.15 21h-4.3c-2.324 0-3.486 0-4.31-.667c-.826-.667-1.07-1.803-1.556-4.076l-.429-2c-.718-3.353-1.078-5.029-.177-6.143c.548-.678 1.397-.943 2.75-1.047l2.201-4.402a.75.75 0 0 1 1.342.67L7.836 6.99Q8.559 7 9.422 7h5.156q.863-.001 1.586.005l-1.835-3.67a.75.75 0 0 1 .336-1.006M9 11.25a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0v-4a.75.75 0 0 1 .75-.75m6 0a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0v-4a.75.75 0 0 1 .75-.75"
+                    ></path></svg
+                  >Buy Now</a
+                >
+              </div>
+            </div>
+            <div
+              class="ins-prod-card aos-init aos-animate"
+              data-aos="fade-up"
+              data-aos-duration="400"
+              data-aos-delay="100"
+            >
+              <a class="ins-prod-image" href="/product?id=r6-pro"
+                ><img alt="R6 Pro" src="/assets/img/0065a681-89a2-4360-8e33-eb5293eb0f16.png"
+              /></a>
+              <div class="ins-prod-info">
+                <div class="ins-prod-title-row">
+                  <h3 class="ins-prod-title">R6 Pro</h3>
+                  <span class="ins-prod-badge">Rainbow Six Seige</span>
+                </div>
+                <div class="ins-prod-price-block"><span class="ins-prod-price">€6.00</span></div>
+                <a class="ins-prod-buy" href="/product?id=r6-pro"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M14.665 2.33a.75.75 0 0 1 1.006.335l2.201 4.402c1.353.104 2.202.37 2.75 1.047c.9 1.114.541 2.79-.177 6.143l-.429 2c-.487 2.273-.73 3.409-1.555 4.076S16.474 21 14.15 21h-4.3c-2.324 0-3.486 0-4.31-.667c-.826-.667-1.07-1.803-1.556-4.076l-.429-2c-.718-3.353-1.078-5.029-.177-6.143c.548-.678 1.397-.943 2.75-1.047l2.201-4.402a.75.75 0 0 1 1.342.67L7.836 6.99Q8.559 7 9.422 7h5.156q.863-.001 1.586.005l-1.835-3.67a.75.75 0 0 1 .336-1.006M9 11.25a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0v-4a.75.75 0 0 1 .75-.75m6 0a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0v-4a.75.75 0 0 1 .75-.75"
+                    ></path></svg
+                  >Buy Now</a
+                >
+              </div>
+            </div>
+            <div
+              class="ins-prod-card aos-init aos-animate"
+              data-aos="fade-up"
+              data-aos-duration="400"
+              data-aos-delay="150"
+            >
+              <a class="ins-prod-image" href="/product?id=arc-raiders-public"
+                ><img
+                  alt="Arc Raiders Public"
+                  src="/assets/img/f95b2b38-c65c-414c-9bf5-27fbbedf684b.png"
+              /></a>
+              <div class="ins-prod-info">
+                <div class="ins-prod-title-row">
+                  <h3 class="ins-prod-title">Arc Raiders Public</h3>
+                  <span class="ins-prod-badge">Arc Raiders</span>
+                </div>
+                <div class="ins-prod-price-block"><span class="ins-prod-price">€5.00</span></div>
+                <a class="ins-prod-buy" href="/product?id=arc-raiders-public"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M14.665 2.33a.75.75 0 0 1 1.006.335l2.201 4.402c1.353.104 2.202.37 2.75 1.047c.9 1.114.541 2.79-.177 6.143l-.429 2c-.487 2.273-.73 3.409-1.555 4.076S16.474 21 14.15 21h-4.3c-2.324 0-3.486 0-4.31-.667c-.826-.667-1.07-1.803-1.556-4.076l-.429-2c-.718-3.353-1.078-5.029-.177-6.143c.548-.678 1.397-.943 2.75-1.047l2.201-4.402a.75.75 0 0 1 1.342.67L7.836 6.99Q8.559 7 9.422 7h5.156q.863-.001 1.586.005l-1.835-3.67a.75.75 0 0 1 .336-1.006M9 11.25a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0v-4a.75.75 0 0 1 .75-.75m6 0a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0v-4a.75.75 0 0 1 .75-.75"
+                    ></path></svg
+                  >Buy Now</a
+                >
+              </div>
+            </div>
+            <div
+              class="ins-prod-card aos-init aos-animate"
+              data-aos="fade-up"
+              data-aos-duration="400"
+              data-aos-delay="200"
+            >
+              <a class="ins-prod-image" href="/product?id=rust-private"
+                ><img alt="Rust Private" src="/assets/img/0e6ce96a-b687-4267-b642-36cef1f46e9d.png"
+              /></a>
+              <div class="ins-prod-info">
+                <div class="ins-prod-title-row">
+                  <h3 class="ins-prod-title">Rust Private</h3>
+                  <span class="ins-prod-badge">Rust</span>
+                </div>
+                <div class="ins-prod-price-block"><span class="ins-prod-price">€6.99</span></div>
+                <a class="ins-prod-buy" href="/product?id=rust-private"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M14.665 2.33a.75.75 0 0 1 1.006.335l2.201 4.402c1.353.104 2.202.37 2.75 1.047c.9 1.114.541 2.79-.177 6.143l-.429 2c-.487 2.273-.73 3.409-1.555 4.076S16.474 21 14.15 21h-4.3c-2.324 0-3.486 0-4.31-.667c-.826-.667-1.07-1.803-1.556-4.076l-.429-2c-.718-3.353-1.078-5.029-.177-6.143c.548-.678 1.397-.943 2.75-1.047l2.201-4.402a.75.75 0 0 1 1.342.67L7.836 6.99Q8.559 7 9.422 7h5.156q.863-.001 1.586.005l-1.835-3.67a.75.75 0 0 1 .336-1.006M9 11.25a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0v-4a.75.75 0 0 1 .75-.75m6 0a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0v-4a.75.75 0 0 1 .75-.75"
+                    ></path></svg
+                  >Buy Now</a
+                >
+              </div>
+            </div>
+            <div
+              class="ins-prod-card aos-init aos-animate"
+              data-aos="fade-up"
+              data-aos-duration="400"
+              data-aos-delay="250"
+            >
+              <a class="ins-prod-image" href="/product?id=sulphated-temp"
+                ><img alt="Sulphated Temp" src="/assets/img/2a7c3f97-bb55-4cb3-b3e6-ab56aef9cd22.png"
+              /></a>
+              <div class="ins-prod-info">
+                <div class="ins-prod-title-row">
+                  <h3 class="ins-prod-title">Sulphated Temp</h3>
+                  <span class="ins-prod-badge">Spoofer</span>
+                </div>
+                <div class="ins-prod-price-block"><span class="ins-prod-price">€6.00</span></div>
+                <a class="ins-prod-buy" href="/product?id=sulphated-temp"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M14.665 2.33a.75.75 0 0 1 1.006.335l2.201 4.402c1.353.104 2.202.37 2.75 1.047c.9 1.114.541 2.79-.177 6.143l-.429 2c-.487 2.273-.73 3.409-1.555 4.076S16.474 21 14.15 21h-4.3c-2.324 0-3.486 0-4.31-.667c-.826-.667-1.07-1.803-1.556-4.076l-.429-2c-.718-3.353-1.078-5.029-.177-6.143c.548-.678 1.397-.943 2.75-1.047l2.201-4.402a.75.75 0 0 1 1.342.67L7.836 6.99Q8.559 7 9.422 7h5.156q.863-.001 1.586.005l-1.835-3.67a.75.75 0 0 1 .336-1.006M9 11.25a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0v-4a.75.75 0 0 1 .75-.75m6 0a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0v-4a.75.75 0 0 1 .75-.75"
+                    ></path></svg
+                  >Buy Now</a
+                >
+              </div>
+            </div>
+            <div
+              class="ins-prod-card aos-init aos-animate"
+              data-aos="fade-up"
+              data-aos-duration="400"
+              data-aos-delay="0"
+            >
+              <a class="ins-prod-image" href="/product?id=sulphated-perm"
+                ><img alt="Sulphated Perm" src="/assets/img/2a7c3f97-bb55-4cb3-b3e6-ab56aef9cd22.png"
+              /></a>
+              <div class="ins-prod-info">
+                <div class="ins-prod-title-row">
+                  <h3 class="ins-prod-title">Sulphated Perm</h3>
+                  <span class="ins-prod-badge">Spoofer</span>
+                </div>
+                <div class="ins-prod-price-block"><span class="ins-prod-price">€25.00</span></div>
+                <a class="ins-prod-buy" href="/product?id=sulphated-perm"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="18"
+                    height="18"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      clip-rule="evenodd"
+                      d="M14.665 2.33a.75.75 0 0 1 1.006.335l2.201 4.402c1.353.104 2.202.37 2.75 1.047c.9 1.114.541 2.79-.177 6.143l-.429 2c-.487 2.273-.73 3.409-1.555 4.076S16.474 21 14.15 21h-4.3c-2.324 0-3.486 0-4.31-.667c-.826-.667-1.07-1.803-1.556-4.076l-.429-2c-.718-3.353-1.078-5.029-.177-6.143c.548-.678 1.397-.943 2.75-1.047l2.201-4.402a.75.75 0 0 1 1.342.67L7.836 6.99Q8.559 7 9.422 7h5.156q.863-.001 1.586.005l-1.835-3.67a.75.75 0 0 1 .336-1.006M9 11.25a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0v-4a.75.75 0 0 1 .75-.75m6 0a.75.75 0 0 1 .75.75v4a.75.75 0 0 1-1.5 0v-4a.75.75 0 0 1 .75-.75"
+                    ></path></svg
+                  >Buy Now</a
+                >
+              </div>
+            </div>
+          </div>
+          <p class="ins-empty" hidden>No products in this category yet.</p>
+        </div>
+      </section>
+      <footer class="footer component ux-footer" id="contact">
+        <div class="ux-footer-glow-left"></div>
+        <div class="ux-footer-glow-right"></div>
+        <div class="container" style="position: relative; z-index: 1">
+          <div class="ux-footer-payments-wrap">
+            <div class="ux-footer-payments" aria-label="Accepted payment methods">
+              <img alt="Visa" src="/assets/payments/visa.svg" /><img
+                alt="Mastercard"
+                src="/assets/payments/mastercard.svg"
+              /><img alt="PayPal" src="/assets/payments/paypal.svg" /><img
+                alt="Apple Pay"
+                src="/assets/payments/applepay.svg"
+              /><img alt="Cash App" src="/assets/payments/cashapp.svg" /><span
+                class="ux-footer-payments-coins"
+                ><img alt="Bitcoin" src="/assets/payments/bitcoin.svg" /><img
+                  alt="Litecoin"
+                  src="/assets/payments/litecoin.svg"
+              /></span>
+            </div>
+          </div>
+          <div class="ux-footer-grid">
+            <div class="ux-footer-brand" style="align-items: flex-start; gap: 0.75rem">
+              <a href="/" style="display: inline-block; margin-left: 1rem; margin-top: 0.5rem"
+                ><img
+                  alt="Sulphated"
+                  src="/assets/insert-mark.svg"
+                  style="height: 48px; width: auto; display: block"
+              /></a>
+              <p
+                style="
+                  color: rgba(255, 255, 255, 0.45);
+                  font-size: 0.82rem;
+                  line-height: 1.55;
+                  margin: 0px 0px 0px 1rem;
+                  max-width: 260px;
+                "
+              >
+                Sulphated provides the best products on the market at a low price and with fast
+                support.
+              </p>
+              <div class="ux-visitors-pill">
+                <span class="ux-visitors-dot" aria-hidden="true"
+                  ><span class="ux-visitors-dot-ping"></span
+                  ><span class="ux-visitors-dot-core"></span></span
+                ><span class="ux-visitors-text"><strong>55</strong> Visitors Online</span>
+              </div>
+            </div>
+            <div class="ux-footer-links-group">
+              <div class="ux-footer-col">
+                <h3>Navigation</h3>
+                <ul>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/#products">Products</a></li>
+                  <li><a href="/#reviews">Reviews</a></li>
+                  <li><a href="/status">Status</a></li>
+                </ul>
+              </div>
+              <div class="ux-footer-col">
+                <h3>Support</h3>
+                <ul>
+                  <li><a href="/terms">Terms of Service</a></li>
+                  <li><a href="/refund-policy">Refund Policy</a></li>
+                  <li><a href="/privacy-policy">Privacy Policy</a></li>
+                </ul>
+              </div>
+              <div class="ux-footer-col">
+                <h3>Popular Products</h3>
+                <ul>
+                  <li><a href="/product?id=fn">Fortnite Private</a></li>
+                  <li><a href="/product?id=r6-lite">R6 Lite</a></li>
+                  <li><a href="/product?id=r6-pro">R6 Pro</a></li>
+                  <li><a href="/product?id=arc-raiders-public">Arc Raiders Public</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="ux-footer-bottom">
+            <div class="ux-footer-status" aria-label="System status">
+              <span class="ux-footer-status-dot"
+                ><span class="ux-footer-status-ping"></span
+                ><span class="ux-footer-status-core"></span></span
+              ><span class="ux-footer-status-text">All Systems Operational</span>
+            </div>
+            <p style="font-size: 0.72rem">
+              Copyright © 2026. All Rights Reserved.<span style="opacity: 0.35; margin: 0px 0.4rem"
+                >|</span
+              ><span style="opacity: 0.5">made by discord vivaol</span>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div id="cart-overlay" class="cart-overlay" hidden></div>
+    <aside
+      id="cart-drawer"
+      class="fixed top-0 right-0 h-full w-full sm:w-[420px] bg-theme-primary border-l border-theme shadow-2xl flex flex-col z-[9999] cart-slide-animate"
+      hidden
+    >
+      <div class="flex items-center justify-between p-6 border-b border-theme">
+        <h2 class="text-theme-primary text-lg heading-semibold">
+          Shopping Cart
+          <span id="cart-count" class="text-theme-secondary text-sm font-normal">(0 Items)</span>
+        </h2>
+        <button
+          type="button"
+          data-close-cart
+          class="inline-flex items-center justify-center text-white h-8 w-8 rounded-md hover:bg-white/10"
+          aria-label="Close"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </button>
+      </div>
+      <div id="cart-body" class="flex-1 overflow-y-auto px-6 mt-6"></div>
+      <div id="cart-foot" class="cart-foot" hidden>
+        <div class="flex justify-between text-white mb-3">
+          <span>Total</span><strong id="cart-total">€0.00</strong>
+        </div>
+        <button
+          type="button"
+          data-close-cart
+          class="dp-pp-buy inline-flex items-center justify-center w-full"
+        >
+          Continue Shopping
+        </button>
+      </div>
+    </aside>
+    <script src="/js/site.js"></script>
+  </body>
+</html>

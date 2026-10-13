@@ -1,0 +1,24 @@
+<svg width="114" height="114" viewBox="0 0 114 114" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_f_mark)">
+<path d="M38.803 38.6666V2H2V38.6666H38.803Z" fill="url(#paint0_mark)"/>
+<path d="M38.803 38.6666L2.81784 75.7407V112H38.803V38.6666Z" fill="url(#paint0_mark)"/>
+<path d="M73.5613 4.44435L38.803 38.6666H60.0669C65.9554 38.6666 76.0149 44.7778 76.0149 52.5185V112H112V52.5185C112 28.8888 90.7361 9.33334 73.5613 4.44435Z" fill="url(#paint0_mark)"/>
+</g>
+<path d="M38.803 38.6666V2H2V38.6666H38.803Z" fill="url(#paint0_mark)"/>
+<path d="M38.803 38.6666L2.81784 75.7407V112H38.803V38.6666Z" fill="url(#paint0_mark)"/>
+<path d="M73.5613 4.44435L38.803 38.6666H60.0669C65.9554 38.6666 76.0149 44.7778 76.0149 52.5185V112H112V52.5185C112 28.8888 90.7361 9.33334 73.5613 4.44435Z" fill="url(#paint0_mark)"/>
+<path d="M38.803 38.6666V2H2V38.6666H38.803Z" fill="url(#paint0_mark)" fill-opacity="0.2"/>
+<path d="M38.803 38.6666L2.81784 75.7407V112H38.803V38.6666Z" fill="url(#paint0_mark)" fill-opacity="0.2"/>
+<path d="M73.5613 4.44435L38.803 38.6666H60.0669C65.9554 38.6666 76.0149 44.7778 76.0149 52.5185V112H112V52.5185C112 28.8888 90.7361 9.33334 73.5613 4.44435Z" fill="url(#paint0_mark)" fill-opacity="0.2"/>
+<defs>
+<filter id="filter0_f_mark" x="0" y="0" width="114" height="114" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="1" result="effect1_foregroundBlur_mark"/>
+</filter>
+<linearGradient id="paint0_mark" x1="2" y1="2" x2="112" y2="112" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FB2DFF"/>
+<stop offset="1" stop-color="#C200B7"/>
+</linearGradient>
+</defs>
+</svg>

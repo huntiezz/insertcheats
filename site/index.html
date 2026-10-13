@@ -1,0 +1,2382 @@
+<!doctype html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Sulphated</title>
+    <link rel="icon" href="/assets/favicon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/css/site.css" />
+    <link rel="stylesheet" href="/css/extra.css" />
+  </head>
+  <body>
+    <div class="min-h-screen bg-theme-primary relative overflow-hidden">
+      <div class="ux-ambient-bg" aria-hidden="true"></div>
+      <header id="header" class="at-top">
+        <nav>
+          <div id="navbar-logo">
+            <a href="/"
+              ><img alt="Sulphated" class="ins-logo-img" src="/assets/logo-CulUdTix.png"
+            /></a>
+          </div>
+          <div id="navbar-links">
+            <a href="/products">Products</a><a href="/#faq">FAQ</a
+            ><a href="https://discord.gg/rGMkAXZtvW" target="_blank" rel="noreferrer">Discord</a
+            ><a href="/status">Status</a
+            ><a href="https://discord.gg/rGMkAXZtvW" target="_blank" rel="noreferrer">Support</a>
+          </div>
+          <div id="navbar-buttons" class="hidden md:flex">
+            <div class="relative flex items-center">
+              <div
+                class="search-pop absolute right-0 top-0 h-8 bg-gray-900 border border-gray-700 rounded-md backdrop-blur-md transition-all duration-300 ease-out overflow-hidden w-0 opacity-0"
+              >
+                <form class="h-full flex items-center">
+                  <div class="flex items-center w-full h-full px-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-search w-4 h-4 text-gray-300 flex-shrink-0"
+                    >
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <path d="m21 21-4.3-4.3"></path></svg
+                    ><input
+                      placeholder="Search products..."
+                      class="flex-1 bg-transparent text-gray-50 text-sm placeholder:text-gray-300 border-none outline-none ml-2 min-w-0"
+                      type="text"
+                      value=""
+                    />
+                    <div
+                      class="shortcut -mr-1 hidden justify-end gap-0.5 whitespace-nowrap text-gray-300 text-xs md:flex"
+                    >
+                      <kbd
+                        class="flex h-5 min-w-5 items-center justify-center rounded border border-gray-700 bg-gray-800 px-1"
+                        >Esc</kbd
+                      >
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <button
+                class="gap-2 whitespace-nowrap font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 shadow-xs hover:shadow-md active:shadow-xs transform active:scale-[0.98] text-sm bg-transparent border border-gray-300 dark:border-white/20 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-white/10 h-8 w-8 p-0 rounded-md flex items-center justify-center transition-all duration-300 relative z-10 opacity-100"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-search w-4 h-4"
+                >
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.3-4.3"></path>
+                </svg>
+              </button>
+            </div>
+            <div class="relative">
+              <button
+                class="gap-2 whitespace-nowrap font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 shadow-xs hover:shadow-md active:shadow-xs transform active:scale-[0.98] bg-transparent border border-gray-300 dark:border-white/20 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-white/10 h-8 w-8 md:w-auto md:px-3 p-0 md:py-2 rounded-md flex items-center justify-center md:gap-2 text-sm tracking-20-smaller transition-all duration-300 relative"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-shopping-cart w-4 h-4"
+                >
+                  <circle cx="8" cy="21" r="1"></circle>
+                  <circle cx="19" cy="21" r="1"></circle>
+                  <path
+                    d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+                  ></path></svg
+                ><span class="hidden md:inline">Cart</span>
+              </button>
+            </div>
+            <a
+              id="get-started-btn"
+              class="ins-get-started-btn"
+              href="https://discord.gg/rGMkAXZtvW"
+              target="_blank"
+              rel="noreferrer"
+              ><span>Dashboard</span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-arrow-right w-[14px] h-[14px] ml-1"
+              >
+                <path d="M5 12h14"></path>
+                <path d="m12 5 7 7-7 7"></path></svg
+            ></a>
+          </div>
+          <div class="flex md:hidden items-center gap-2">
+            <div class="relative flex items-center">
+              <div
+                class="search-pop absolute right-0 top-0 h-8 bg-gray-900 border border-gray-700 rounded-md backdrop-blur-md transition-all duration-300 ease-out overflow-hidden w-0 opacity-0"
+              >
+                <form class="h-full flex items-center">
+                  <div class="flex items-center w-full h-full px-3">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                      stroke-width="2"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      class="lucide lucide-search w-4 h-4 text-gray-300 flex-shrink-0"
+                    >
+                      <circle cx="11" cy="11" r="8"></circle>
+                      <path d="m21 21-4.3-4.3"></path></svg
+                    ><input
+                      placeholder="Search products..."
+                      class="flex-1 bg-transparent text-gray-50 text-sm placeholder:text-gray-300 border-none outline-none ml-2 min-w-0"
+                      type="text"
+                      value=""
+                    />
+                    <div
+                      class="shortcut -mr-1 hidden justify-end gap-0.5 whitespace-nowrap text-gray-300 text-xs md:flex"
+                    >
+                      <kbd
+                        class="flex h-5 min-w-5 items-center justify-center rounded border border-gray-700 bg-gray-800 px-1"
+                        >Esc</kbd
+                      >
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <button
+                class="gap-2 whitespace-nowrap font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 shadow-xs hover:shadow-md active:shadow-xs transform active:scale-[0.98] text-sm bg-transparent border border-gray-300 dark:border-white/20 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-white/10 h-8 w-8 p-0 rounded-md flex items-center justify-center transition-all duration-300 relative z-10 opacity-100"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-search w-4 h-4"
+                >
+                  <circle cx="11" cy="11" r="8"></circle>
+                  <path d="m21 21-4.3-4.3"></path>
+                </svg>
+              </button>
+            </div>
+            <div class="relative">
+              <button
+                class="gap-2 whitespace-nowrap font-medium ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 shadow-xs hover:shadow-md active:shadow-xs transform active:scale-[0.98] bg-transparent border border-gray-300 dark:border-white/20 text-gray-900 dark:text-white hover:bg-gray-100 dark:hover:bg-white/10 h-8 w-8 md:w-auto md:px-3 p-0 md:py-2 rounded-md flex items-center justify-center md:gap-2 text-sm tracking-20-smaller transition-all duration-300 relative"
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="lucide lucide-shopping-cart w-4 h-4"
+                >
+                  <circle cx="8" cy="21" r="1"></circle>
+                  <circle cx="19" cy="21" r="1"></circle>
+                  <path
+                    d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"
+                  ></path></svg
+                ><span class="hidden md:inline">Cart</span>
+              </button>
+            </div>
+            <button
+              class="gap-2 whitespace-nowrap font-medium ring-offset-background transition-all focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 transform active:scale-[0.98] hover:text-accent-foreground shadow-none hover:shadow-none active:shadow-none text-sm bg-transparent border border-white/15 text-white hover:bg-white/10 h-8 w-8 p-0 rounded-md flex items-center justify-center"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-menu w-5 h-5"
+              >
+                <line x1="4" x2="20" y1="12" y2="12"></line>
+                <line x1="4" x2="20" y1="6" y2="6"></line>
+                <line x1="4" x2="20" y1="18" y2="18"></line>
+              </svg>
+            </button>
+          </div>
+        </nav>
+      </header>
+      <div id="mobile-menu" class="mobile-menu">
+        <a href="/products">Products</a><a href="/#faq">FAQ</a
+        ><a href="https://discord.gg/rGMkAXZtvW" target="_blank" rel="noreferrer">Discord</a
+        ><a href="/status">Status</a
+        ><a href="https://discord.gg/rGMkAXZtvW" target="_blank" rel="noreferrer">Support</a>
+      </div>
+      <main class="dp-hero">
+        <div class="dp-hero-streaks" aria-hidden="true">
+          <span
+            class="dp-streak"
+            style="left: 8%; top: -5%; height: 62%; width: 1px; opacity: 0.22; filter: blur(0.6px)"
+          ></span
+          ><span
+            class="dp-streak"
+            style="
+              left: 16%;
+              top: -10%;
+              height: 118%;
+              width: 1px;
+              opacity: 0.55;
+              filter: blur(1.4px);
+            "
+          ></span
+          ><span
+            class="dp-streak"
+            style="left: 23%; top: 8%; height: 30%; width: 1px; opacity: 0.14; filter: blur(0.8px)"
+          ></span
+          ><span
+            class="dp-streak"
+            style="
+              left: 30%;
+              top: -8%;
+              height: 92%;
+              width: 2.5px;
+              opacity: 0.7;
+              filter: blur(2.2px);
+            "
+          ></span
+          ><span
+            class="dp-streak"
+            style="left: 37%; top: 22%; height: 20%; width: 1px; opacity: 0.12; filter: blur(0.5px)"
+          ></span
+          ><span
+            class="dp-streak"
+            style="left: 45%; top: -5%; height: 78%; width: 1px; opacity: 0.3; filter: blur(1px)"
+          ></span
+          ><span
+            class="dp-streak"
+            style="left: 53%; top: 12%; height: 52%; width: 1px; opacity: 0.18; filter: blur(0.7px)"
+          ></span
+          ><span
+            class="dp-streak"
+            style="
+              left: 61%;
+              top: -12%;
+              height: 128%;
+              width: 2px;
+              opacity: 0.6;
+              filter: blur(1.8px);
+            "
+          ></span
+          ><span
+            class="dp-streak"
+            style="left: 69%; top: 5%; height: 42%; width: 1px; opacity: 0.22; filter: blur(0.6px)"
+          ></span
+          ><span
+            class="dp-streak"
+            style="
+              left: 77%;
+              top: -6%;
+              height: 73%;
+              width: 1.5px;
+              opacity: 0.42;
+              filter: blur(1.6px);
+            "
+          ></span
+          ><span
+            class="dp-streak"
+            style="left: 85%; top: 20%; height: 26%; width: 1px; opacity: 0.14; filter: blur(0.5px)"
+          ></span
+          ><span
+            class="dp-streak"
+            style="left: 93%; top: -8%; height: 88%; width: 1px; opacity: 0.3; filter: blur(1.2px)"
+          ></span
+          ><span
+            class="dp-streak"
+            style="
+              left: 97%;
+              top: -4%;
+              height: 38%;
+              width: 1.5px;
+              opacity: 0.65;
+              filter: blur(0.8px);
+            "
+          ></span>
+        </div>
+        <div class="dp-hero-inner">
+          <a href="#products" class="dp-hero-pill"
+            ><svg
+              class="dp-hero-pill-check"
+              xmlns="http://www.w3.org/2000/svg"
+              width="16"
+              height="16"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+            >
+              <path
+                d="M15.06 10.5a.75.75 0 0 0-1.12-1l-3.011 3.374l-.87-.974a.75.75 0 0 0-1.118 1l1.428 1.6a.75.75 0 0 0 1.119 0z"
+              ></path>
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M12 1.25c-.937 0-1.833.307-3.277.801l-.727.25c-1.481.506-2.625.898-3.443 1.23c-.412.167-.767.33-1.052.495c-.275.16-.55.359-.737.626c-.185.263-.281.587-.341.9c-.063.324-.1.713-.125 1.16c-.048.886-.048 2.102-.048 3.678v1.601c0 6.101 4.608 9.026 7.348 10.224l.027.011c.34.149.66.288 1.027.382c.387.1.799.142 1.348.142s.96-.042 1.348-.142c.367-.094.687-.233 1.026-.382l.028-.011c2.74-1.198 7.348-4.123 7.348-10.224V10.39c0-1.576 0-2.792-.048-3.678c-.024-.447-.062-.836-.125-1.16c-.06-.313-.156-.637-.34-.9c-.188-.267-.463-.466-.738-.626c-.285-.165-.64-.328-1.052-.495c-.818-.332-1.962-.724-3.443-1.23l-.727-.25C13.833 1.557 12.937 1.25 12 1.25M9.205 3.47c1.55-.53 2.27-.77 2.795-.77s1.246.24 2.795.77l.6.205c1.546.529 2.6.892 3.345 1.194c.366.149.62.275.797.378c.168.097.222.158.235.176c.014.02.05.085.078.234c.031.16.06.385.082.794c.045.838.046 2.005.046 3.617v1.476c0 5.27-3.93 7.78-6.45 8.881c-.379.166-.578.25-.789.305c-.197.05-.448.08-.94.08c-.49 0-.74-.03-.937-.08c-.21-.054-.41-.139-.789-.305c-2.52-1.102-6.45-3.612-6.45-8.881V10.07c0-1.612 0-2.779.046-3.617c.022-.41.05-.633.082-.794c.029-.149.064-.214.078-.234c.013-.018.067-.079.235-.176c.176-.103.43-.23.797-.378c.745-.302 1.799-.665 3.345-1.194z"
+              ></path></svg
+            ><span>Trusted by 24,759+ Satisfied Customers</span
+            ><svg
+              class="dp-hero-pill-arrow"
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path d="M5 12h14"></path>
+              <path d="M12 5l7 7l-7 7"></path></svg
+          ></a>
+          <h1 class="dp-hero-title">Dominate every match<br />the right way with<br />Sulphated!</h1>
+          <p class="dp-hero-sub">
+            Sulphated is the leading provider of premium cheats, offering competitive pricing, fully
+            automated delivery so you never have to wait. Our system delivers a smooth, reliable
+            experience while keeping customer satisfaction our top priority.
+          </p>
+          <div class="dp-hero-actions">
+            <a class="dp-hero-btn dp-hero-btn-primary" href="/products"
+              ><span>Shop Now</span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="9" cy="21" r="1"></circle>
+                <circle cx="20" cy="21" r="1"></circle>
+                <path
+                  d="M1 1h4l2.7 13.4a2 2 0 0 0 2 1.6h9.7a2 2 0 0 0 2-1.6L23 6H6"
+                ></path></svg></a
+            ><a
+              href="https://discord.gg/rGMkAXZtvW"
+              target="_blank"
+              rel="noreferrer"
+              class="dp-hero-btn dp-hero-btn-primary"
+              ><span>Join our Discord</span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="16"
+                height="16"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M19.27 5.33C17.94 4.71 16.5 4.26 15 4a.09.09 0 0 0-.07.03c-.18.33-.39.76-.53 1.09a16.09 16.09 0 0 0-4.8 0c-.14-.34-.35-.76-.54-1.09c-.01-.02-.04-.03-.07-.03c-1.5.26-2.93.71-4.27 1.33c-.01 0-.02.01-.03.02c-2.72 4.07-3.47 8.03-3.1 11.95c0 .02.01.04.03.05c1.8 1.32 3.53 2.12 5.24 2.65c.03.01.06 0 .07-.02c.4-.55.76-1.13 1.07-1.74c.02-.04 0-.08-.04-.09c-.57-.22-1.11-.48-1.64-.78c-.04-.02-.04-.08-.01-.11c.11-.08.22-.17.33-.25c.02-.02.05-.02.07-.01c3.44 1.57 7.15 1.57 10.55 0c.02-.01.05-.01.07.01c.11.09.22.17.33.26c.04.03.04.09-.01.11c-.52.31-1.07.56-1.64.78c-.04.01-.05.06-.04.09c.32.61.68 1.19 1.07 1.74c.03.01.06.02.09.01c1.72-.53 3.45-1.33 5.25-2.65c.02-.01.03-.03.03-.05c.44-4.53-.73-8.46-3.1-11.95c-.01-.01-.02-.02-.04-.02zM8.52 14.91c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.84 2.12-1.89 2.12zm6.97 0c-1.03 0-1.89-.95-1.89-2.12s.84-2.12 1.89-2.12c1.06 0 1.9.96 1.89 2.12c0 1.17-.83 2.12-1.89 2.12z"
+                ></path></svg
+            ></a>
+          </div>
+          <a
+            href="https://www.trustpilot.com/"
+            target="_blank"
+            rel="noreferrer"
+            class="dp-hero-trustpilot"
+            ><svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="#00b67a"
+            >
+              <path
+                d="M12 2l2.39 7.36H22l-6.18 4.49l2.36 7.27L12 16.63l-6.18 4.49l2.36-7.27L2 9.36h7.61z"
+              ></path></svg
+            ><span>Trustpilot</span></a
+          >
+        </div>
+        <a href="#products" class="dp-hero-scroll" aria-label="Scroll down"
+          ><svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="12" y1="4" x2="12" y2="20"></line>
+            <polyline points="6 14 12 20 18 14"></polyline></svg
+        ></a>
+      </main>
+      <section class="featured-products" id="products">
+        <div class="section-header">
+          <div class="section-pill aos-init" data-aos="fade-up">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"
+              ></path>
+              <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+              <line x1="12" y1="22.08" x2="12" y2="12"></line></svg
+            ><span>Catalog</span>
+          </div>
+          <h2 class="section-title aos-init" data-aos="fade-up">Our Products</h2>
+          <p class="section-subtitle aos-init" data-aos="fade-up">
+            Browse our full lineup of cheats
+          </p>
+          <div class="bestseller-grid">
+            <div data-aos="fade-up" data-aos-duration="400" data-aos-delay="0" class="aos-init">
+              <a
+                class="product-card ins-cat-card"
+                href="/category?id=02992494-2501-4838-9126-5312c53f49e6"
+                ><div class="product-image">
+                  <span class="ins-cat-startprice">€10.99</span
+                  ><img
+                    alt="Fortnite"
+                    src="/assets/img/442cf155-40e8-484c-b6e4-de23524551b6.png"
+                  /></div
+              ></a>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="400" data-aos-delay="50" class="aos-init">
+              <a
+                class="product-card ins-cat-card"
+                href="/category?id=a848f2a0-5252-4a52-910c-bd0b5b6a1654"
+                ><div class="product-image">
+                  <span class="ins-cat-startprice">€6.00</span
+                  ><img
+                    alt="Spoofer"
+                    src="/assets/img/e90f86ee-f483-4b67-a5e2-f690f0bfbdea.png"
+                  /></div
+              ></a>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="400" data-aos-delay="100" class="aos-init">
+              <a
+                class="product-card ins-cat-card"
+                href="/category?id=5766ae29-f9bc-457e-bcb6-647b52dba2e1"
+                ><div class="product-image">
+                  <img
+                    alt="Valorant"
+                    src="/assets/img/3fedc5ac-eb92-4987-b5cd-68e22bdd04f9.png"
+                  /></div
+              ></a>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="400" data-aos-delay="150" class="aos-init">
+              <a
+                class="product-card ins-cat-card"
+                href="/category?id=d9f4aa93-1eca-44e3-8bc4-21be9d468f83"
+                ><div class="product-image">
+                  <span class="ins-cat-startprice">€6.00</span
+                  ><img
+                    alt="Rainbow Six Seige"
+                    src="/assets/img/9f4d642e-ec09-4980-8617-f88edd255529.png"
+                  /></div
+              ></a>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="400" data-aos-delay="200" class="aos-init">
+              <a
+                class="product-card ins-cat-card"
+                href="/category?id=89363b01-735c-4bc4-8241-310bf21c9694"
+                ><div class="product-image">
+                  <img
+                    alt="Black Ops 7"
+                    src="/assets/img/532c96f2-aef7-4005-8ab8-7f30820778a3.png"
+                  /></div
+              ></a>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="400" data-aos-delay="250" class="aos-init">
+              <a
+                class="product-card ins-cat-card"
+                href="/category?id=72aa29e6-6c59-4a9f-86ac-bd4d514baab9"
+                ><div class="product-image">
+                  <span class="ins-cat-startprice">€5.00</span
+                  ><img
+                    alt="Arc Raiders"
+                    src="/assets/img/e4d92013-71c0-475b-9b61-c5a037bdec46.png"
+                  /></div
+              ></a>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="400" data-aos-delay="0" class="aos-init">
+              <a
+                class="product-card ins-cat-card"
+                href="/category?id=35b4d23e-f40e-411f-bd64-0f9899b833c0"
+                ><div class="product-image">
+                  <span class="ins-cat-startprice">€6.99</span
+                  ><img
+                    alt="Rust"
+                    src="/assets/img/db187180-302a-4a71-a81f-df6a79a483b6.png"
+                  /></div
+              ></a>
+            </div>
+            <div data-aos="fade-up" data-aos-duration="400" data-aos-delay="50" class="aos-init">
+              <a
+                class="product-card ins-cat-card"
+                href="/category?id=0ec094b7-b4be-4816-a6f6-45f4c28b37ed"
+                ><div class="product-image">
+                  <img
+                    alt="Apex Legends"
+                    src="/assets/img/46945c50-c1f0-4210-bb5e-a159cc9073ea.png"
+                  /></div
+              ></a>
+            </div>
+          </div>
+          <div class="view-all-wrap">
+            <a class="btn-ghost-pill" href="/products"
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+              >
+                <path
+                  d="M5 10.75a1.25 1.25 0 1 0 0 2.5a1.25 1.25 0 0 0 0-2.5M12 10.75a1.25 1.25 0 1 0 0 2.5a1.25 1.25 0 0 0 0-2.5M19 10.75a1.25 1.25 0 1 0 0 2.5a1.25 1.25 0 0 0 0-2.5"
+                ></path></svg
+              ><span>View All Products</span></a
+            >
+          </div>
+        </div>
+      </section>
+      <section id="ux-features">
+        <div class="glow-center"></div>
+        <div class="glow-top-right"></div>
+        <div class="glow-bottom-left"></div>
+        <div class="ux-f-inner">
+          <div class="ux-f-badge aos-init" data-aos="fade-up">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                fill-rule="evenodd"
+                d="m21.838 11.126l-.229 2.436c-.378 4.012-.567 6.019-1.75 7.228C18.678 22 16.906 22 13.36 22h-2.72c-3.545 0-5.317 0-6.5-1.21s-1.371-3.216-1.749-7.228l-.23-2.436c-.18-1.912-.27-2.869.058-3.264a1 1 0 0 1 .675-.367c.476-.042 1.073.638 2.268 1.998c.618.704.927 1.055 1.271 1.11a.92.92 0 0 0 .562-.09c.319-.16.53-.595.955-1.464l2.237-4.584C10.989 2.822 11.39 2 12 2s1.011.822 1.813 2.465l2.237 4.584c.424.87.636 1.304.955 1.464c.176.089.37.12.562.09c.344-.055.653-.406 1.271-1.11c1.195-1.36 1.792-2.04 2.268-1.998a1 1 0 0 1 .675.367c.327.395.237 1.352.057 3.264"
+                clip-rule="evenodd"
+              ></path></svg
+            ><span>Sulphated</span>
+          </div>
+          <h2 class="ux-f-title aos-init" data-aos="fade-up">Why Choose Us?</h2>
+          <p class="ux-f-subtitle aos-init" data-aos="fade-up">
+            Everything you need for a safe, fast and easy cheating experience.
+          </p>
+          <div class="ux-f-grid">
+            <div class="ux-f-card ux-f-card-sm">
+              <div class="ux-f-card-visual">
+                <div class="ux-f-globe">
+                  <img alt="Customers around the world" src="/assets/customers-world.png" />
+                </div>
+              </div>
+              <div class="ux-f-card-info">
+                <div class="ux-f-card-info-title">Customers around the world</div>
+                <div class="ux-f-card-info-desc">Users all over the world using our cheats.</div>
+              </div>
+            </div>
+            <div class="ux-f-card ux-f-card-sm">
+              <div class="ux-f-card-visual">
+                <div id="shield-animation-container">
+                  <svg class="shield-icon" viewBox="0 0 24 24">
+                    <path
+                      fill="#c026d3"
+                      d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12c5.16-1.26 9-6.45 9-12V5l-9-4z"
+                    ></path>
+                  </svg>
+                  <div class="wave-container">
+                    <div class="wave wave-1"></div>
+                    <div class="wave wave-2"></div>
+                    <div class="wave wave-3"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="ux-f-card-info">
+                <div class="ux-f-card-info-title">Safe &amp; Undetected.</div>
+                <div class="ux-f-card-info-desc">
+                  We provide the most secure and undetected products on the market.
+                </div>
+              </div>
+            </div>
+            <div class="ux-f-card ux-f-card-md">
+              <div class="ux-f-card-visual">
+                <div class="ux-f-delivery">
+                  <div class="ux-f-delivery-order">
+                    <span class="ux-f-delivery-order-id">Order #8492</span
+                    ><span class="ux-f-delivery-status">Delivered</span>
+                  </div>
+                  <div class="ux-f-delivery-bar">
+                    <div class="ux-f-delivery-bar-track">
+                      <div class="ux-f-delivery-bar-fill"></div>
+                    </div>
+                  </div>
+                  <div class="ux-f-delivery-details">
+                    <div class="ux-f-delivery-details-icon">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="16"
+                        height="16"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          fill="currentColor"
+                          d="M21 16.5C21 16.88 20.79 17.21 20.47 17.38L12.57 21.82C12.41 21.94 12.21 22 12 22C11.79 22 11.59 21.94 11.43 21.82L3.53 17.38C3.21 17.21 3 16.88 3 16.5V7.5C3 7.12 3.21 6.79 3.53 6.62L11.43 2.18C11.59 2.06 11.79 2 12 2C12.21 2 12.41 2.06 12.57 2.18L20.47 6.62C20.79 6.79 21 7.12 21 7.5V16.5M12 4.15L5 8.09V15.91L12 19.85L19 15.91V8.09L12 4.15M12 6.23L16.9 9.16L12 12.09L7.1 9.16L12 6.23M17 14.89L13 17.2V12.46L17 10.15V14.89Z"
+                        ></path>
+                      </svg>
+                    </div>
+                    <div class="ux-f-delivery-details-text">
+                      <span class="ux-f-delivery-details-title">Login Details</span
+                      ><span class="ux-f-delivery-details-sub">Sent to email</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ux-f-card-info">
+                <div class="ux-f-card-info-title">Instant Delivery.</div>
+                <div class="ux-f-card-info-desc">Experience instant key delivery.</div>
+              </div>
+            </div>
+            <div class="ux-f-card ux-f-card-md">
+              <div class="ux-f-card-visual">
+                <div class="ux-f-support-text"><span>24/7</span><span>Support</span></div>
+              </div>
+              <div class="ux-f-card-info">
+                <div class="ux-f-card-info-title">24/7 Support</div>
+                <div class="ux-f-card-info-desc">
+                  We provide fast, responsive support you'll never be left waiting, and our team is
+                  always ready to help anytime.
+                </div>
+              </div>
+            </div>
+            <div class="ux-f-card ux-f-card-lg">
+              <div class="ux-f-card-visual">
+                <div class="ux-f-menu-outer">
+                  <div class="ux-f-try-hint" aria-hidden="true">
+                    <img alt="" src="/assets/try-arrow.png" />
+                  </div>
+                  <div class="ux-f-menu">
+                    <div class="ux-f-menu-tabs">
+                      <button
+                        type="button"
+                        class="ux-f-menu-tab ux-f-menu-tab-active"
+                        aria-label="Aimbot"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M12 2a1 1 0 0 1 1 1v.055A9.004 9.004 0 0 1 20.945 11H21a1 1 0 1 1 0 2h-.055A9.004 9.004 0 0 1 13 20.945V21a1 1 0 1 1-2 0v-.055A9.004 9.004 0 0 1 3.055 13H3a1 1 0 1 1 0-2h.055A9.004 9.004 0 0 1 11 3.055V3a1 1 0 0 1 1-1m1 3.07V6a1 1 0 0 1-1.993.117L11 6v-.93a7.01 7.01 0 0 0-5.888 5.676L5.071 11H6a1 1 0 0 1 .117 1.993L6 13h-.93a7.01 7.01 0 0 0 5.676 5.888l.254.041V18a1 1 0 0 1 1.993-.117L13 18v.93a7.01 7.01 0 0 0 5.888-5.676l.041-.254H18a1 1 0 0 1-.117-1.993L18 11h.93a7.01 7.01 0 0 0-5.676-5.888zm-1 5.43a1.5 1.5 0 1 1 0 3a1.5 1.5 0 0 1 0-3"
+                          ></path>
+                        </svg></button
+                      ><button type="button" class="ux-f-menu-tab" aria-label="ESP">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                          stroke-width="2.2"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        >
+                          <path d="M15 12a3 3 0 1 1-6 0a3 3 0 0 1 6 0"></path>
+                          <path
+                            d="M2 12c1.6-4.097 5.336-7 10-7s8.4 2.903 10 7c-1.6 4.097-5.336 7-10 7s-8.4-2.903-10-7"
+                          ></path>
+                        </svg></button
+                      ><button type="button" class="ux-f-menu-tab" aria-label="Visuals">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="18"
+                          height="18"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M21 16.5C21 16.88 20.79 17.21 20.47 17.38L12.57 21.82C12.41 21.94 12.21 22 12 22C11.79 22 11.59 21.94 11.43 21.82L3.53 17.38C3.21 17.21 3 16.88 3 16.5V7.5C3 7.12 3.21 6.79 3.53 6.62L11.43 2.18C11.59 2.06 11.79 2 12 2C12.21 2 12.41 2.06 12.57 2.18L20.47 6.62C20.79 6.79 21 7.12 21 7.5V16.5M12 4.15L5 8.09V15.91L12 19.85L19 15.91V8.09L12 4.15M12 6.23L16.9 9.16L12 12.09L7.1 9.16L12 6.23M17 14.89L13 17.2V12.46L17 10.15V14.89Z"
+                          ></path>
+                        </svg></button
+                      ><button type="button" class="ux-f-menu-tab" aria-label="Misc">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          width="14"
+                          height="14"
+                          viewBox="0 0 16 16"
+                        >
+                          <path
+                            fill="currentColor"
+                            d="M4 0v7.268a2 2 0 1 1-2 0V0zm0 12v4H2v-4zm5-9.732V0H7v2.268a2 2 0 1 0 2 0M9 16V7H7v9zm5-8.732V0h-2v7.268a2 2 0 1 0 2 0M14 16v-4h-2v4z"
+                          ></path>
+                        </svg>
+                      </button>
+                    </div>
+                    <div class="ux-f-menu-content">
+                      <div class="ux-f-menu-row">
+                        <span class="ux-f-menu-label">Aimbot</span
+                        ><label class="ux-f-toggle"
+                          ><input type="checkbox" checked="" /><span
+                            class="ux-f-toggle-slider"
+                          ></span
+                        ></label>
+                      </div>
+                      <div class="ux-f-menu-row">
+                        <span class="ux-f-menu-label">Visible Only</span
+                        ><label class="ux-f-toggle"
+                          ><input type="checkbox" checked="" /><span
+                            class="ux-f-toggle-slider"
+                          ></span
+                        ></label>
+                      </div>
+                      <div class="ux-f-menu-row">
+                        <span class="ux-f-menu-label">Silent Aim</span
+                        ><label class="ux-f-toggle"
+                          ><input type="checkbox" checked="" /><span
+                            class="ux-f-toggle-slider"
+                          ></span
+                        ></label>
+                      </div>
+                      <div class="ux-f-menu-row">
+                        <span class="ux-f-menu-label">Aimbot Smoothing</span
+                        ><input min="0" max="100" class="ux-f-range" type="range" value="0" />
+                      </div>
+                      <div class="ux-f-menu-row">
+                        <span class="ux-f-menu-label">Aimbot FOV</span
+                        ><input min="0" max="100" class="ux-f-range" type="range" value="40" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="ux-f-card-info">
+                <div class="ux-f-card-info-title">Easy Setup</div>
+                <div class="ux-f-card-info-desc">
+                  Our products are user-friendly and require no technical skills, you can even try
+                  them from the menu above.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="ins-rev featured-products" id="reviews">
+        <div class="section-header">
+          <div class="section-pill aos-init" data-aos="fade-up">
+            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+              ></path></svg
+            ><span>Reviews</span>
+          </div>
+          <h2 class="section-title aos-init" data-aos="fade-up">What our customers say</h2>
+          <p class="section-subtitle aos-init" data-aos="fade-up">
+            Verified feedback from real users across every game we support.
+          </p>
+        </div>
+        <div class="ins-rev-stage aos-init" data-aos="fade-up">
+          <div class="ins-rev-row ins-rev-row--ltr">
+            <div class="ins-rev-track">
+              <article class="ins-rev-card">
+                <header class="ins-rev-head">
+                  <div class="ins-rev-stars" aria-label="5 out of 5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span class="ins-rev-date">May 02, 2026</span>
+                </header>
+                <p class="ins-rev-text">
+                  Setup was instant. Got my key in under a minute and it just worked.
+                </p>
+                <footer class="ins-rev-foot">
+                  <span class="ins-rev-product">Zeroday External (1 Day key)</span
+                  ><span class="ins-rev-verified"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12.01 2.011a3.2 3.2 0 0 1 2.113.797l.154.145l.698.698a1.2 1.2 0 0 0 .71.341L15.82 4h1a3.2 3.2 0 0 1 3.195 3.018l.005.182v1c0 .27.092.533.258.743l.09.1l.697.698a3.2 3.2 0 0 1 .147 4.382l-.145.154l-.698.698a1.2 1.2 0 0 0-.341.71l-.008.135v1a3.2 3.2 0 0 1-3.018 3.195l-.182.005h-1a1.2 1.2 0 0 0-.743.258l-.1.09l-.698.697a3.2 3.2 0 0 1-4.382.147l-.154-.145l-.698-.698a1.2 1.2 0 0 0-.71-.341L8.2 20.02h-1a3.2 3.2 0 0 1-3.195-3.018L4 16.82v-1a1.2 1.2 0 0 0-.258-.743l-.09-.1l-.697-.698a3.2 3.2 0 0 1-.147-4.382l.145-.154l.698-.698a1.2 1.2 0 0 0 .341-.71L4 8.2v-1l.005-.182a3.2 3.2 0 0 1 3.013-3.013L7.2 4h1a1.2 1.2 0 0 0 .743-.258l.1-.09l.698-.697a3.2 3.2 0 0 1 2.269-.944m3.697 7.282a1 1 0 0 0-1.414 0L11 12.585l-1.293-1.292l-.094-.083a1 1 0 0 0-1.32 1.497l2 2l.094.083a1 1 0 0 0 1.32-.083l4-4l.083-.094a1 1 0 0 0-.083-1.32"
+                      ></path></svg
+                    >Verified</span
+                  >
+                </footer>
+              </article>
+              <article class="ins-rev-card">
+                <header class="ins-rev-head">
+                  <div class="ins-rev-stars" aria-label="5 out of 5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span class="ins-rev-date">Apr 28, 2026</span>
+                </header>
+                <p class="ins-rev-text">Smooth and undetected so far. Solid build.</p>
+                <footer class="ins-rev-foot">
+                  <span class="ins-rev-product">Crusader Internal (1 Day key)</span
+                  ><span class="ins-rev-verified"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12.01 2.011a3.2 3.2 0 0 1 2.113.797l.154.145l.698.698a1.2 1.2 0 0 0 .71.341L15.82 4h1a3.2 3.2 0 0 1 3.195 3.018l.005.182v1c0 .27.092.533.258.743l.09.1l.697.698a3.2 3.2 0 0 1 .147 4.382l-.145.154l-.698.698a1.2 1.2 0 0 0-.341.71l-.008.135v1a3.2 3.2 0 0 1-3.018 3.195l-.182.005h-1a1.2 1.2 0 0 0-.743.258l-.1.09l-.698.697a3.2 3.2 0 0 1-4.382.147l-.154-.145l-.698-.698a1.2 1.2 0 0 0-.71-.341L8.2 20.02h-1a3.2 3.2 0 0 1-3.195-3.018L4 16.82v-1a1.2 1.2 0 0 0-.258-.743l-.09-.1l-.697-.698a3.2 3.2 0 0 1-.147-4.382l.145-.154l.698-.698a1.2 1.2 0 0 0 .341-.71L4 8.2v-1l.005-.182a3.2 3.2 0 0 1 3.013-3.013L7.2 4h1a1.2 1.2 0 0 0 .743-.258l.1-.09l.698-.697a3.2 3.2 0 0 1 2.269-.944m3.697 7.282a1 1 0 0 0-1.414 0L11 12.585l-1.293-1.292l-.094-.083a1 1 0 0 0-1.32 1.497l2 2l.094.083a1 1 0 0 0 1.32-.083l4-4l.083-.094a1 1 0 0 0-.083-1.32"
+                      ></path></svg
+                    >Verified</span
+                  >
+                </footer>
+              </article>
+              <article class="ins-rev-card">
+                <header class="ins-rev-head">
+                  <div class="ins-rev-stars" aria-label="5 out of 5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span class="ins-rev-date">Apr 24, 2026</span>
+                </header>
+                <p class="ins-rev-text">
+                  Cleanest UI of any provider I have used. Configs save reliably and the team is
+                  active.
+                </p>
+                <footer class="ins-rev-foot">
+                  <span class="ins-rev-product">Exodus External (7 Day key)</span
+                  ><span class="ins-rev-verified"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12.01 2.011a3.2 3.2 0 0 1 2.113.797l.154.145l.698.698a1.2 1.2 0 0 0 .71.341L15.82 4h1a3.2 3.2 0 0 1 3.195 3.018l.005.182v1c0 .27.092.533.258.743l.09.1l.697.698a3.2 3.2 0 0 1 .147 4.382l-.145.154l-.698.698a1.2 1.2 0 0 0-.341.71l-.008.135v1a3.2 3.2 0 0 1-3.018 3.195l-.182.005h-1a1.2 1.2 0 0 0-.743.258l-.1.09l-.698.697a3.2 3.2 0 0 1-4.382.147l-.154-.145l-.698-.698a1.2 1.2 0 0 0-.71-.341L8.2 20.02h-1a3.2 3.2 0 0 1-3.195-3.018L4 16.82v-1a1.2 1.2 0 0 0-.258-.743l-.09-.1l-.697-.698a3.2 3.2 0 0 1-.147-4.382l.145-.154l.698-.698a1.2 1.2 0 0 0 .341-.71L4 8.2v-1l.005-.182a3.2 3.2 0 0 1 3.013-3.013L7.2 4h1a1.2 1.2 0 0 0 .743-.258l.1-.09l.698-.697a3.2 3.2 0 0 1 2.269-.944m3.697 7.282a1 1 0 0 0-1.414 0L11 12.585l-1.293-1.292l-.094-.083a1 1 0 0 0-1.32 1.497l2 2l.094.083a1 1 0 0 0 1.32-.083l4-4l.083-.094a1 1 0 0 0-.083-1.32"
+                      ></path></svg
+                    >Verified</span
+                  >
+                </footer>
+              </article>
+              <article class="ins-rev-card">
+                <header class="ins-rev-head">
+                  <div class="ins-rev-stars" aria-label="4 out of 5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span class="ins-rev-date">Apr 19, 2026</span>
+                </header>
+                <p class="ins-rev-text">
+                  Works as advertised. Took a minute to find the right config.
+                </p>
+                <footer class="ins-rev-foot">
+                  <span class="ins-rev-product">FiveM Suite (1 Day key)</span
+                  ><span class="ins-rev-verified"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12.01 2.011a3.2 3.2 0 0 1 2.113.797l.154.145l.698.698a1.2 1.2 0 0 0 .71.341L15.82 4h1a3.2 3.2 0 0 1 3.195 3.018l.005.182v1c0 .27.092.533.258.743l.09.1l.697.698a3.2 3.2 0 0 1 .147 4.382l-.145.154l-.698.698a1.2 1.2 0 0 0-.341.71l-.008.135v1a3.2 3.2 0 0 1-3.018 3.195l-.182.005h-1a1.2 1.2 0 0 0-.743.258l-.1.09l-.698.697a3.2 3.2 0 0 1-4.382.147l-.154-.145l-.698-.698a1.2 1.2 0 0 0-.71-.341L8.2 20.02h-1a3.2 3.2 0 0 1-3.195-3.018L4 16.82v-1a1.2 1.2 0 0 0-.258-.743l-.09-.1l-.697-.698a3.2 3.2 0 0 1-.147-4.382l.145-.154l.698-.698a1.2 1.2 0 0 0 .341-.71L4 8.2v-1l.005-.182a3.2 3.2 0 0 1 3.013-3.013L7.2 4h1a1.2 1.2 0 0 0 .743-.258l.1-.09l.698-.697a3.2 3.2 0 0 1 2.269-.944m3.697 7.282a1 1 0 0 0-1.414 0L11 12.585l-1.293-1.292l-.094-.083a1 1 0 0 0-1.32 1.497l2 2l.094.083a1 1 0 0 0 1.32-.083l4-4l.083-.094a1 1 0 0 0-.083-1.32"
+                      ></path></svg
+                    >Verified</span
+                  >
+                </footer>
+              </article>
+              <article class="ins-rev-card">
+                <header class="ins-rev-head">
+                  <div class="ins-rev-stars" aria-label="5 out of 5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span class="ins-rev-date">Apr 14, 2026</span>
+                </header>
+                <p class="ins-rev-text">Best 7 days I have spent.</p>
+                <footer class="ins-rev-foot">
+                  <span class="ins-rev-product">Rust Internal (7 Day key)</span
+                  ><span class="ins-rev-verified"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12.01 2.011a3.2 3.2 0 0 1 2.113.797l.154.145l.698.698a1.2 1.2 0 0 0 .71.341L15.82 4h1a3.2 3.2 0 0 1 3.195 3.018l.005.182v1c0 .27.092.533.258.743l.09.1l.697.698a3.2 3.2 0 0 1 .147 4.382l-.145.154l-.698.698a1.2 1.2 0 0 0-.341.71l-.008.135v1a3.2 3.2 0 0 1-3.018 3.195l-.182.005h-1a1.2 1.2 0 0 0-.743.258l-.1.09l-.698.697a3.2 3.2 0 0 1-4.382.147l-.154-.145l-.698-.698a1.2 1.2 0 0 0-.71-.341L8.2 20.02h-1a3.2 3.2 0 0 1-3.195-3.018L4 16.82v-1a1.2 1.2 0 0 0-.258-.743l-.09-.1l-.697-.698a3.2 3.2 0 0 1-.147-4.382l.145-.154l.698-.698a1.2 1.2 0 0 0 .341-.71L4 8.2v-1l.005-.182a3.2 3.2 0 0 1 3.013-3.013L7.2 4h1a1.2 1.2 0 0 0 .743-.258l.1-.09l.698-.697a3.2 3.2 0 0 1 2.269-.944m3.697 7.282a1 1 0 0 0-1.414 0L11 12.585l-1.293-1.292l-.094-.083a1 1 0 0 0-1.32 1.497l2 2l.094.083a1 1 0 0 0 1.32-.083l4-4l.083-.094a1 1 0 0 0-.083-1.32"
+                      ></path></svg
+                    >Verified</span
+                  >
+                </footer>
+              </article>
+              <article class="ins-rev-card">
+                <header class="ins-rev-head">
+                  <div class="ins-rev-stars" aria-label="5 out of 5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span class="ins-rev-date">Apr 10, 2026</span>
+                </header>
+                <p class="ins-rev-text">Light footprint and the spoofer actually does its job.</p>
+                <footer class="ins-rev-foot">
+                  <span class="ins-rev-product">ARC Raiders (1 Day key)</span
+                  ><span class="ins-rev-verified"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12.01 2.011a3.2 3.2 0 0 1 2.113.797l.154.145l.698.698a1.2 1.2 0 0 0 .71.341L15.82 4h1a3.2 3.2 0 0 1 3.195 3.018l.005.182v1c0 .27.092.533.258.743l.09.1l.697.698a3.2 3.2 0 0 1 .147 4.382l-.145.154l-.698.698a1.2 1.2 0 0 0-.341.71l-.008.135v1a3.2 3.2 0 0 1-3.018 3.195l-.182.005h-1a1.2 1.2 0 0 0-.743.258l-.1.09l-.698.697a3.2 3.2 0 0 1-4.382.147l-.154-.145l-.698-.698a1.2 1.2 0 0 0-.71-.341L8.2 20.02h-1a3.2 3.2 0 0 1-3.195-3.018L4 16.82v-1a1.2 1.2 0 0 0-.258-.743l-.09-.1l-.697-.698a3.2 3.2 0 0 1-.147-4.382l.145-.154l.698-.698a1.2 1.2 0 0 0 .341-.71L4 8.2v-1l.005-.182a3.2 3.2 0 0 1 3.013-3.013L7.2 4h1a1.2 1.2 0 0 0 .743-.258l.1-.09l.698-.697a3.2 3.2 0 0 1 2.269-.944m3.697 7.282a1 1 0 0 0-1.414 0L11 12.585l-1.293-1.292l-.094-.083a1 1 0 0 0-1.32 1.497l2 2l.094.083a1 1 0 0 0 1.32-.083l4-4l.083-.094a1 1 0 0 0-.083-1.32"
+                      ></path></svg
+                    >Verified</span
+                  >
+                </footer>
+              </article>
+              <article class="ins-rev-card">
+                <header class="ins-rev-head">
+                  <div class="ins-rev-stars" aria-label="5 out of 5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span class="ins-rev-date">May 02, 2026</span>
+                </header>
+                <p class="ins-rev-text">
+                  Setup was instant. Got my key in under a minute and it just worked.
+                </p>
+                <footer class="ins-rev-foot">
+                  <span class="ins-rev-product">Zeroday External (1 Day key)</span
+                  ><span class="ins-rev-verified"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12.01 2.011a3.2 3.2 0 0 1 2.113.797l.154.145l.698.698a1.2 1.2 0 0 0 .71.341L15.82 4h1a3.2 3.2 0 0 1 3.195 3.018l.005.182v1c0 .27.092.533.258.743l.09.1l.697.698a3.2 3.2 0 0 1 .147 4.382l-.145.154l-.698.698a1.2 1.2 0 0 0-.341.71l-.008.135v1a3.2 3.2 0 0 1-3.018 3.195l-.182.005h-1a1.2 1.2 0 0 0-.743.258l-.1.09l-.698.697a3.2 3.2 0 0 1-4.382.147l-.154-.145l-.698-.698a1.2 1.2 0 0 0-.71-.341L8.2 20.02h-1a3.2 3.2 0 0 1-3.195-3.018L4 16.82v-1a1.2 1.2 0 0 0-.258-.743l-.09-.1l-.697-.698a3.2 3.2 0 0 1-.147-4.382l.145-.154l.698-.698a1.2 1.2 0 0 0 .341-.71L4 8.2v-1l.005-.182a3.2 3.2 0 0 1 3.013-3.013L7.2 4h1a1.2 1.2 0 0 0 .743-.258l.1-.09l.698-.697a3.2 3.2 0 0 1 2.269-.944m3.697 7.282a1 1 0 0 0-1.414 0L11 12.585l-1.293-1.292l-.094-.083a1 1 0 0 0-1.32 1.497l2 2l.094.083a1 1 0 0 0 1.32-.083l4-4l.083-.094a1 1 0 0 0-.083-1.32"
+                      ></path></svg
+                    >Verified</span
+                  >
+                </footer>
+              </article>
+              <article class="ins-rev-card">
+                <header class="ins-rev-head">
+                  <div class="ins-rev-stars" aria-label="5 out of 5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span class="ins-rev-date">Apr 28, 2026</span>
+                </header>
+                <p class="ins-rev-text">Smooth and undetected so far. Solid build.</p>
+                <footer class="ins-rev-foot">
+                  <span class="ins-rev-product">Crusader Internal (1 Day key)</span
+                  ><span class="ins-rev-verified"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12.01 2.011a3.2 3.2 0 0 1 2.113.797l.154.145l.698.698a1.2 1.2 0 0 0 .71.341L15.82 4h1a3.2 3.2 0 0 1 3.195 3.018l.005.182v1c0 .27.092.533.258.743l.09.1l.697.698a3.2 3.2 0 0 1 .147 4.382l-.145.154l-.698.698a1.2 1.2 0 0 0-.341.71l-.008.135v1a3.2 3.2 0 0 1-3.018 3.195l-.182.005h-1a1.2 1.2 0 0 0-.743.258l-.1.09l-.698.697a3.2 3.2 0 0 1-4.382.147l-.154-.145l-.698-.698a1.2 1.2 0 0 0-.71-.341L8.2 20.02h-1a3.2 3.2 0 0 1-3.195-3.018L4 16.82v-1a1.2 1.2 0 0 0-.258-.743l-.09-.1l-.697-.698a3.2 3.2 0 0 1-.147-4.382l.145-.154l.698-.698a1.2 1.2 0 0 0 .341-.71L4 8.2v-1l.005-.182a3.2 3.2 0 0 1 3.013-3.013L7.2 4h1a1.2 1.2 0 0 0 .743-.258l.1-.09l.698-.697a3.2 3.2 0 0 1 2.269-.944m3.697 7.282a1 1 0 0 0-1.414 0L11 12.585l-1.293-1.292l-.094-.083a1 1 0 0 0-1.32 1.497l2 2l.094.083a1 1 0 0 0 1.32-.083l4-4l.083-.094a1 1 0 0 0-.083-1.32"
+                      ></path></svg
+                    >Verified</span
+                  >
+                </footer>
+              </article>
+              <article class="ins-rev-card">
+                <header class="ins-rev-head">
+                  <div class="ins-rev-stars" aria-label="5 out of 5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span class="ins-rev-date">Apr 24, 2026</span>
+                </header>
+                <p class="ins-rev-text">
+                  Cleanest UI of any provider I have used. Configs save reliably and the team is
+                  active.
+                </p>
+                <footer class="ins-rev-foot">
+                  <span class="ins-rev-product">Exodus External (7 Day key)</span
+                  ><span class="ins-rev-verified"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12.01 2.011a3.2 3.2 0 0 1 2.113.797l.154.145l.698.698a1.2 1.2 0 0 0 .71.341L15.82 4h1a3.2 3.2 0 0 1 3.195 3.018l.005.182v1c0 .27.092.533.258.743l.09.1l.697.698a3.2 3.2 0 0 1 .147 4.382l-.145.154l-.698.698a1.2 1.2 0 0 0-.341.71l-.008.135v1a3.2 3.2 0 0 1-3.018 3.195l-.182.005h-1a1.2 1.2 0 0 0-.743.258l-.1.09l-.698.697a3.2 3.2 0 0 1-4.382.147l-.154-.145l-.698-.698a1.2 1.2 0 0 0-.71-.341L8.2 20.02h-1a3.2 3.2 0 0 1-3.195-3.018L4 16.82v-1a1.2 1.2 0 0 0-.258-.743l-.09-.1l-.697-.698a3.2 3.2 0 0 1-.147-4.382l.145-.154l.698-.698a1.2 1.2 0 0 0 .341-.71L4 8.2v-1l.005-.182a3.2 3.2 0 0 1 3.013-3.013L7.2 4h1a1.2 1.2 0 0 0 .743-.258l.1-.09l.698-.697a3.2 3.2 0 0 1 2.269-.944m3.697 7.282a1 1 0 0 0-1.414 0L11 12.585l-1.293-1.292l-.094-.083a1 1 0 0 0-1.32 1.497l2 2l.094.083a1 1 0 0 0 1.32-.083l4-4l.083-.094a1 1 0 0 0-.083-1.32"
+                      ></path></svg
+                    >Verified</span
+                  >
+                </footer>
+              </article>
+              <article class="ins-rev-card">
+                <header class="ins-rev-head">
+                  <div class="ins-rev-stars" aria-label="4 out of 5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span class="ins-rev-date">Apr 19, 2026</span>
+                </header>
+                <p class="ins-rev-text">
+                  Works as advertised. Took a minute to find the right config.
+                </p>
+                <footer class="ins-rev-foot">
+                  <span class="ins-rev-product">FiveM Suite (1 Day key)</span
+                  ><span class="ins-rev-verified"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12.01 2.011a3.2 3.2 0 0 1 2.113.797l.154.145l.698.698a1.2 1.2 0 0 0 .71.341L15.82 4h1a3.2 3.2 0 0 1 3.195 3.018l.005.182v1c0 .27.092.533.258.743l.09.1l.697.698a3.2 3.2 0 0 1 .147 4.382l-.145.154l-.698.698a1.2 1.2 0 0 0-.341.71l-.008.135v1a3.2 3.2 0 0 1-3.018 3.195l-.182.005h-1a1.2 1.2 0 0 0-.743.258l-.1.09l-.698.697a3.2 3.2 0 0 1-4.382.147l-.154-.145l-.698-.698a1.2 1.2 0 0 0-.71-.341L8.2 20.02h-1a3.2 3.2 0 0 1-3.195-3.018L4 16.82v-1a1.2 1.2 0 0 0-.258-.743l-.09-.1l-.697-.698a3.2 3.2 0 0 1-.147-4.382l.145-.154l.698-.698a1.2 1.2 0 0 0 .341-.71L4 8.2v-1l.005-.182a3.2 3.2 0 0 1 3.013-3.013L7.2 4h1a1.2 1.2 0 0 0 .743-.258l.1-.09l.698-.697a3.2 3.2 0 0 1 2.269-.944m3.697 7.282a1 1 0 0 0-1.414 0L11 12.585l-1.293-1.292l-.094-.083a1 1 0 0 0-1.32 1.497l2 2l.094.083a1 1 0 0 0 1.32-.083l4-4l.083-.094a1 1 0 0 0-.083-1.32"
+                      ></path></svg
+                    >Verified</span
+                  >
+                </footer>
+              </article>
+              <article class="ins-rev-card">
+                <header class="ins-rev-head">
+                  <div class="ins-rev-stars" aria-label="5 out of 5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span class="ins-rev-date">Apr 14, 2026</span>
+                </header>
+                <p class="ins-rev-text">Best 7 days I have spent.</p>
+                <footer class="ins-rev-foot">
+                  <span class="ins-rev-product">Rust Internal (7 Day key)</span
+                  ><span class="ins-rev-verified"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12.01 2.011a3.2 3.2 0 0 1 2.113.797l.154.145l.698.698a1.2 1.2 0 0 0 .71.341L15.82 4h1a3.2 3.2 0 0 1 3.195 3.018l.005.182v1c0 .27.092.533.258.743l.09.1l.697.698a3.2 3.2 0 0 1 .147 4.382l-.145.154l-.698.698a1.2 1.2 0 0 0-.341.71l-.008.135v1a3.2 3.2 0 0 1-3.018 3.195l-.182.005h-1a1.2 1.2 0 0 0-.743.258l-.1.09l-.698.697a3.2 3.2 0 0 1-4.382.147l-.154-.145l-.698-.698a1.2 1.2 0 0 0-.71-.341L8.2 20.02h-1a3.2 3.2 0 0 1-3.195-3.018L4 16.82v-1a1.2 1.2 0 0 0-.258-.743l-.09-.1l-.697-.698a3.2 3.2 0 0 1-.147-4.382l.145-.154l.698-.698a1.2 1.2 0 0 0 .341-.71L4 8.2v-1l.005-.182a3.2 3.2 0 0 1 3.013-3.013L7.2 4h1a1.2 1.2 0 0 0 .743-.258l.1-.09l.698-.697a3.2 3.2 0 0 1 2.269-.944m3.697 7.282a1 1 0 0 0-1.414 0L11 12.585l-1.293-1.292l-.094-.083a1 1 0 0 0-1.32 1.497l2 2l.094.083a1 1 0 0 0 1.32-.083l4-4l.083-.094a1 1 0 0 0-.083-1.32"
+                      ></path></svg
+                    >Verified</span
+                  >
+                </footer>
+              </article>
+              <article class="ins-rev-card">
+                <header class="ins-rev-head">
+                  <div class="ins-rev-stars" aria-label="5 out of 5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span class="ins-rev-date">Apr 10, 2026</span>
+                </header>
+                <p class="ins-rev-text">Light footprint and the spoofer actually does its job.</p>
+                <footer class="ins-rev-foot">
+                  <span class="ins-rev-product">ARC Raiders (1 Day key)</span
+                  ><span class="ins-rev-verified"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12.01 2.011a3.2 3.2 0 0 1 2.113.797l.154.145l.698.698a1.2 1.2 0 0 0 .71.341L15.82 4h1a3.2 3.2 0 0 1 3.195 3.018l.005.182v1c0 .27.092.533.258.743l.09.1l.697.698a3.2 3.2 0 0 1 .147 4.382l-.145.154l-.698.698a1.2 1.2 0 0 0-.341.71l-.008.135v1a3.2 3.2 0 0 1-3.018 3.195l-.182.005h-1a1.2 1.2 0 0 0-.743.258l-.1.09l-.698.697a3.2 3.2 0 0 1-4.382.147l-.154-.145l-.698-.698a1.2 1.2 0 0 0-.71-.341L8.2 20.02h-1a3.2 3.2 0 0 1-3.195-3.018L4 16.82v-1a1.2 1.2 0 0 0-.258-.743l-.09-.1l-.697-.698a3.2 3.2 0 0 1-.147-4.382l.145-.154l.698-.698a1.2 1.2 0 0 0 .341-.71L4 8.2v-1l.005-.182a3.2 3.2 0 0 1 3.013-3.013L7.2 4h1a1.2 1.2 0 0 0 .743-.258l.1-.09l.698-.697a3.2 3.2 0 0 1 2.269-.944m3.697 7.282a1 1 0 0 0-1.414 0L11 12.585l-1.293-1.292l-.094-.083a1 1 0 0 0-1.32 1.497l2 2l.094.083a1 1 0 0 0 1.32-.083l4-4l.083-.094a1 1 0 0 0-.083-1.32"
+                      ></path></svg
+                    >Verified</span
+                  >
+                </footer>
+              </article>
+            </div>
+          </div>
+          <div class="ins-rev-row ins-rev-row--rtl">
+            <div class="ins-rev-track">
+              <article class="ins-rev-card">
+                <header class="ins-rev-head">
+                  <div class="ins-rev-stars" aria-label="5 out of 5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span class="ins-rev-date">Apr 06, 2026</span>
+                </header>
+                <p class="ins-rev-text">
+                  Delivery was instant. Discord support replied in under 5 minutes.
+                </p>
+                <footer class="ins-rev-foot">
+                  <span class="ins-rev-product">Zeroday External (30 Day Key)</span
+                  ><span class="ins-rev-verified"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12.01 2.011a3.2 3.2 0 0 1 2.113.797l.154.145l.698.698a1.2 1.2 0 0 0 .71.341L15.82 4h1a3.2 3.2 0 0 1 3.195 3.018l.005.182v1c0 .27.092.533.258.743l.09.1l.697.698a3.2 3.2 0 0 1 .147 4.382l-.145.154l-.698.698a1.2 1.2 0 0 0-.341.71l-.008.135v1a3.2 3.2 0 0 1-3.018 3.195l-.182.005h-1a1.2 1.2 0 0 0-.743.258l-.1.09l-.698.697a3.2 3.2 0 0 1-4.382.147l-.154-.145l-.698-.698a1.2 1.2 0 0 0-.71-.341L8.2 20.02h-1a3.2 3.2 0 0 1-3.195-3.018L4 16.82v-1a1.2 1.2 0 0 0-.258-.743l-.09-.1l-.697-.698a3.2 3.2 0 0 1-.147-4.382l.145-.154l.698-.698a1.2 1.2 0 0 0 .341-.71L4 8.2v-1l.005-.182a3.2 3.2 0 0 1 3.013-3.013L7.2 4h1a1.2 1.2 0 0 0 .743-.258l.1-.09l.698-.697a3.2 3.2 0 0 1 2.269-.944m3.697 7.282a1 1 0 0 0-1.414 0L11 12.585l-1.293-1.292l-.094-.083a1 1 0 0 0-1.32 1.497l2 2l.094.083a1 1 0 0 0 1.32-.083l4-4l.083-.094a1 1 0 0 0-.083-1.32"
+                      ></path></svg
+                    >Verified</span
+                  >
+                </footer>
+              </article>
+              <article class="ins-rev-card">
+                <header class="ins-rev-head">
+                  <div class="ins-rev-stars" aria-label="4 out of 5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span class="ins-rev-date">Apr 01, 2026</span>
+                </header>
+                <p class="ins-rev-text">Solid product. Visuals are crisp.</p>
+                <footer class="ins-rev-foot">
+                  <span class="ins-rev-product">Software Suite (1 Day key)</span
+                  ><span class="ins-rev-verified"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12.01 2.011a3.2 3.2 0 0 1 2.113.797l.154.145l.698.698a1.2 1.2 0 0 0 .71.341L15.82 4h1a3.2 3.2 0 0 1 3.195 3.018l.005.182v1c0 .27.092.533.258.743l.09.1l.697.698a3.2 3.2 0 0 1 .147 4.382l-.145.154l-.698.698a1.2 1.2 0 0 0-.341.71l-.008.135v1a3.2 3.2 0 0 1-3.018 3.195l-.182.005h-1a1.2 1.2 0 0 0-.743.258l-.1.09l-.698.697a3.2 3.2 0 0 1-4.382.147l-.154-.145l-.698-.698a1.2 1.2 0 0 0-.71-.341L8.2 20.02h-1a3.2 3.2 0 0 1-3.195-3.018L4 16.82v-1a1.2 1.2 0 0 0-.258-.743l-.09-.1l-.697-.698a3.2 3.2 0 0 1-.147-4.382l.145-.154l.698-.698a1.2 1.2 0 0 0 .341-.71L4 8.2v-1l.005-.182a3.2 3.2 0 0 1 3.013-3.013L7.2 4h1a1.2 1.2 0 0 0 .743-.258l.1-.09l.698-.697a3.2 3.2 0 0 1 2.269-.944m3.697 7.282a1 1 0 0 0-1.414 0L11 12.585l-1.293-1.292l-.094-.083a1 1 0 0 0-1.32 1.497l2 2l.094.083a1 1 0 0 0 1.32-.083l4-4l.083-.094a1 1 0 0 0-.083-1.32"
+                      ></path></svg
+                    >Verified</span
+                  >
+                </footer>
+              </article>
+              <article class="ins-rev-card">
+                <header class="ins-rev-head">
+                  <div class="ins-rev-stars" aria-label="5 out of 5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span class="ins-rev-date">Mar 27, 2026</span>
+                </header>
+                <p class="ins-rev-text">
+                  The only provider I keep coming back to. Stable and quiet.
+                </p>
+                <footer class="ins-rev-foot">
+                  <span class="ins-rev-product">Crusader Internal (30 Day Key)</span
+                  ><span class="ins-rev-verified"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12.01 2.011a3.2 3.2 0 0 1 2.113.797l.154.145l.698.698a1.2 1.2 0 0 0 .71.341L15.82 4h1a3.2 3.2 0 0 1 3.195 3.018l.005.182v1c0 .27.092.533.258.743l.09.1l.697.698a3.2 3.2 0 0 1 .147 4.382l-.145.154l-.698.698a1.2 1.2 0 0 0-.341.71l-.008.135v1a3.2 3.2 0 0 1-3.018 3.195l-.182.005h-1a1.2 1.2 0 0 0-.743.258l-.1.09l-.698.697a3.2 3.2 0 0 1-4.382.147l-.154-.145l-.698-.698a1.2 1.2 0 0 0-.71-.341L8.2 20.02h-1a3.2 3.2 0 0 1-3.195-3.018L4 16.82v-1a1.2 1.2 0 0 0-.258-.743l-.09-.1l-.697-.698a3.2 3.2 0 0 1-.147-4.382l.145-.154l.698-.698a1.2 1.2 0 0 0 .341-.71L4 8.2v-1l.005-.182a3.2 3.2 0 0 1 3.013-3.013L7.2 4h1a1.2 1.2 0 0 0 .743-.258l.1-.09l.698-.697a3.2 3.2 0 0 1 2.269-.944m3.697 7.282a1 1 0 0 0-1.414 0L11 12.585l-1.293-1.292l-.094-.083a1 1 0 0 0-1.32 1.497l2 2l.094.083a1 1 0 0 0 1.32-.083l4-4l.083-.094a1 1 0 0 0-.083-1.32"
+                      ></path></svg
+                    >Verified</span
+                  >
+                </footer>
+              </article>
+              <article class="ins-rev-card">
+                <header class="ins-rev-head">
+                  <div class="ins-rev-stars" aria-label="5 out of 5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span class="ins-rev-date">Mar 22, 2026</span>
+                </header>
+                <p class="ins-rev-text">Quick checkout, clean panel, no nonsense.</p>
+                <footer class="ins-rev-foot">
+                  <span class="ins-rev-product">Fortnite External (1 Day key)</span
+                  ><span class="ins-rev-verified"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12.01 2.011a3.2 3.2 0 0 1 2.113.797l.154.145l.698.698a1.2 1.2 0 0 0 .71.341L15.82 4h1a3.2 3.2 0 0 1 3.195 3.018l.005.182v1c0 .27.092.533.258.743l.09.1l.697.698a3.2 3.2 0 0 1 .147 4.382l-.145.154l-.698.698a1.2 1.2 0 0 0-.341.71l-.008.135v1a3.2 3.2 0 0 1-3.018 3.195l-.182.005h-1a1.2 1.2 0 0 0-.743.258l-.1.09l-.698.697a3.2 3.2 0 0 1-4.382.147l-.154-.145l-.698-.698a1.2 1.2 0 0 0-.71-.341L8.2 20.02h-1a3.2 3.2 0 0 1-3.195-3.018L4 16.82v-1a1.2 1.2 0 0 0-.258-.743l-.09-.1l-.697-.698a3.2 3.2 0 0 1-.147-4.382l.145-.154l.698-.698a1.2 1.2 0 0 0 .341-.71L4 8.2v-1l.005-.182a3.2 3.2 0 0 1 3.013-3.013L7.2 4h1a1.2 1.2 0 0 0 .743-.258l.1-.09l.698-.697a3.2 3.2 0 0 1 2.269-.944m3.697 7.282a1 1 0 0 0-1.414 0L11 12.585l-1.293-1.292l-.094-.083a1 1 0 0 0-1.32 1.497l2 2l.094.083a1 1 0 0 0 1.32-.083l4-4l.083-.094a1 1 0 0 0-.083-1.32"
+                      ></path></svg
+                    >Verified</span
+                  >
+                </footer>
+              </article>
+              <article class="ins-rev-card">
+                <header class="ins-rev-head">
+                  <div class="ins-rev-stars" aria-label="5 out of 5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span class="ins-rev-date">Mar 18, 2026</span>
+                </header>
+                <p class="ins-rev-text">Updates land fast after every patch. Worth the price.</p>
+                <footer class="ins-rev-foot">
+                  <span class="ins-rev-product">Exodus External (1 Day key)</span
+                  ><span class="ins-rev-verified"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12.01 2.011a3.2 3.2 0 0 1 2.113.797l.154.145l.698.698a1.2 1.2 0 0 0 .71.341L15.82 4h1a3.2 3.2 0 0 1 3.195 3.018l.005.182v1c0 .27.092.533.258.743l.09.1l.697.698a3.2 3.2 0 0 1 .147 4.382l-.145.154l-.698.698a1.2 1.2 0 0 0-.341.71l-.008.135v1a3.2 3.2 0 0 1-3.018 3.195l-.182.005h-1a1.2 1.2 0 0 0-.743.258l-.1.09l-.698.697a3.2 3.2 0 0 1-4.382.147l-.154-.145l-.698-.698a1.2 1.2 0 0 0-.71-.341L8.2 20.02h-1a3.2 3.2 0 0 1-3.195-3.018L4 16.82v-1a1.2 1.2 0 0 0-.258-.743l-.09-.1l-.697-.698a3.2 3.2 0 0 1-.147-4.382l.145-.154l.698-.698a1.2 1.2 0 0 0 .341-.71L4 8.2v-1l.005-.182a3.2 3.2 0 0 1 3.013-3.013L7.2 4h1a1.2 1.2 0 0 0 .743-.258l.1-.09l.698-.697a3.2 3.2 0 0 1 2.269-.944m3.697 7.282a1 1 0 0 0-1.414 0L11 12.585l-1.293-1.292l-.094-.083a1 1 0 0 0-1.32 1.497l2 2l.094.083a1 1 0 0 0 1.32-.083l4-4l.083-.094a1 1 0 0 0-.083-1.32"
+                      ></path></svg
+                    >Verified</span
+                  >
+                </footer>
+              </article>
+              <article class="ins-rev-card">
+                <header class="ins-rev-head">
+                  <div class="ins-rev-stars" aria-label="5 out of 5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span class="ins-rev-date">Mar 12, 2026</span>
+                </header>
+                <p class="ins-rev-text">10/10 will renew.</p>
+                <footer class="ins-rev-foot">
+                  <span class="ins-rev-product">Rust Internal (1 Day key)</span
+                  ><span class="ins-rev-verified"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12.01 2.011a3.2 3.2 0 0 1 2.113.797l.154.145l.698.698a1.2 1.2 0 0 0 .71.341L15.82 4h1a3.2 3.2 0 0 1 3.195 3.018l.005.182v1c0 .27.092.533.258.743l.09.1l.697.698a3.2 3.2 0 0 1 .147 4.382l-.145.154l-.698.698a1.2 1.2 0 0 0-.341.71l-.008.135v1a3.2 3.2 0 0 1-3.018 3.195l-.182.005h-1a1.2 1.2 0 0 0-.743.258l-.1.09l-.698.697a3.2 3.2 0 0 1-4.382.147l-.154-.145l-.698-.698a1.2 1.2 0 0 0-.71-.341L8.2 20.02h-1a3.2 3.2 0 0 1-3.195-3.018L4 16.82v-1a1.2 1.2 0 0 0-.258-.743l-.09-.1l-.697-.698a3.2 3.2 0 0 1-.147-4.382l.145-.154l.698-.698a1.2 1.2 0 0 0 .341-.71L4 8.2v-1l.005-.182a3.2 3.2 0 0 1 3.013-3.013L7.2 4h1a1.2 1.2 0 0 0 .743-.258l.1-.09l.698-.697a3.2 3.2 0 0 1 2.269-.944m3.697 7.282a1 1 0 0 0-1.414 0L11 12.585l-1.293-1.292l-.094-.083a1 1 0 0 0-1.32 1.497l2 2l.094.083a1 1 0 0 0 1.32-.083l4-4l.083-.094a1 1 0 0 0-.083-1.32"
+                      ></path></svg
+                    >Verified</span
+                  >
+                </footer>
+              </article>
+              <article class="ins-rev-card">
+                <header class="ins-rev-head">
+                  <div class="ins-rev-stars" aria-label="5 out of 5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span class="ins-rev-date">Apr 06, 2026</span>
+                </header>
+                <p class="ins-rev-text">
+                  Delivery was instant. Discord support replied in under 5 minutes.
+                </p>
+                <footer class="ins-rev-foot">
+                  <span class="ins-rev-product">Zeroday External (30 Day Key)</span
+                  ><span class="ins-rev-verified"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12.01 2.011a3.2 3.2 0 0 1 2.113.797l.154.145l.698.698a1.2 1.2 0 0 0 .71.341L15.82 4h1a3.2 3.2 0 0 1 3.195 3.018l.005.182v1c0 .27.092.533.258.743l.09.1l.697.698a3.2 3.2 0 0 1 .147 4.382l-.145.154l-.698.698a1.2 1.2 0 0 0-.341.71l-.008.135v1a3.2 3.2 0 0 1-3.018 3.195l-.182.005h-1a1.2 1.2 0 0 0-.743.258l-.1.09l-.698.697a3.2 3.2 0 0 1-4.382.147l-.154-.145l-.698-.698a1.2 1.2 0 0 0-.71-.341L8.2 20.02h-1a3.2 3.2 0 0 1-3.195-3.018L4 16.82v-1a1.2 1.2 0 0 0-.258-.743l-.09-.1l-.697-.698a3.2 3.2 0 0 1-.147-4.382l.145-.154l.698-.698a1.2 1.2 0 0 0 .341-.71L4 8.2v-1l.005-.182a3.2 3.2 0 0 1 3.013-3.013L7.2 4h1a1.2 1.2 0 0 0 .743-.258l.1-.09l.698-.697a3.2 3.2 0 0 1 2.269-.944m3.697 7.282a1 1 0 0 0-1.414 0L11 12.585l-1.293-1.292l-.094-.083a1 1 0 0 0-1.32 1.497l2 2l.094.083a1 1 0 0 0 1.32-.083l4-4l.083-.094a1 1 0 0 0-.083-1.32"
+                      ></path></svg
+                    >Verified</span
+                  >
+                </footer>
+              </article>
+              <article class="ins-rev-card">
+                <header class="ins-rev-head">
+                  <div class="ins-rev-stars" aria-label="4 out of 5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span class="ins-rev-date">Apr 01, 2026</span>
+                </header>
+                <p class="ins-rev-text">Solid product. Visuals are crisp.</p>
+                <footer class="ins-rev-foot">
+                  <span class="ins-rev-product">Software Suite (1 Day key)</span
+                  ><span class="ins-rev-verified"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12.01 2.011a3.2 3.2 0 0 1 2.113.797l.154.145l.698.698a1.2 1.2 0 0 0 .71.341L15.82 4h1a3.2 3.2 0 0 1 3.195 3.018l.005.182v1c0 .27.092.533.258.743l.09.1l.697.698a3.2 3.2 0 0 1 .147 4.382l-.145.154l-.698.698a1.2 1.2 0 0 0-.341.71l-.008.135v1a3.2 3.2 0 0 1-3.018 3.195l-.182.005h-1a1.2 1.2 0 0 0-.743.258l-.1.09l-.698.697a3.2 3.2 0 0 1-4.382.147l-.154-.145l-.698-.698a1.2 1.2 0 0 0-.71-.341L8.2 20.02h-1a3.2 3.2 0 0 1-3.195-3.018L4 16.82v-1a1.2 1.2 0 0 0-.258-.743l-.09-.1l-.697-.698a3.2 3.2 0 0 1-.147-4.382l.145-.154l.698-.698a1.2 1.2 0 0 0 .341-.71L4 8.2v-1l.005-.182a3.2 3.2 0 0 1 3.013-3.013L7.2 4h1a1.2 1.2 0 0 0 .743-.258l.1-.09l.698-.697a3.2 3.2 0 0 1 2.269-.944m3.697 7.282a1 1 0 0 0-1.414 0L11 12.585l-1.293-1.292l-.094-.083a1 1 0 0 0-1.32 1.497l2 2l.094.083a1 1 0 0 0 1.32-.083l4-4l.083-.094a1 1 0 0 0-.083-1.32"
+                      ></path></svg
+                    >Verified</span
+                  >
+                </footer>
+              </article>
+              <article class="ins-rev-card">
+                <header class="ins-rev-head">
+                  <div class="ins-rev-stars" aria-label="5 out of 5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span class="ins-rev-date">Mar 27, 2026</span>
+                </header>
+                <p class="ins-rev-text">
+                  The only provider I keep coming back to. Stable and quiet.
+                </p>
+                <footer class="ins-rev-foot">
+                  <span class="ins-rev-product">Crusader Internal (30 Day Key)</span
+                  ><span class="ins-rev-verified"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12.01 2.011a3.2 3.2 0 0 1 2.113.797l.154.145l.698.698a1.2 1.2 0 0 0 .71.341L15.82 4h1a3.2 3.2 0 0 1 3.195 3.018l.005.182v1c0 .27.092.533.258.743l.09.1l.697.698a3.2 3.2 0 0 1 .147 4.382l-.145.154l-.698.698a1.2 1.2 0 0 0-.341.71l-.008.135v1a3.2 3.2 0 0 1-3.018 3.195l-.182.005h-1a1.2 1.2 0 0 0-.743.258l-.1.09l-.698.697a3.2 3.2 0 0 1-4.382.147l-.154-.145l-.698-.698a1.2 1.2 0 0 0-.71-.341L8.2 20.02h-1a3.2 3.2 0 0 1-3.195-3.018L4 16.82v-1a1.2 1.2 0 0 0-.258-.743l-.09-.1l-.697-.698a3.2 3.2 0 0 1-.147-4.382l.145-.154l.698-.698a1.2 1.2 0 0 0 .341-.71L4 8.2v-1l.005-.182a3.2 3.2 0 0 1 3.013-3.013L7.2 4h1a1.2 1.2 0 0 0 .743-.258l.1-.09l.698-.697a3.2 3.2 0 0 1 2.269-.944m3.697 7.282a1 1 0 0 0-1.414 0L11 12.585l-1.293-1.292l-.094-.083a1 1 0 0 0-1.32 1.497l2 2l.094.083a1 1 0 0 0 1.32-.083l4-4l.083-.094a1 1 0 0 0-.083-1.32"
+                      ></path></svg
+                    >Verified</span
+                  >
+                </footer>
+              </article>
+              <article class="ins-rev-card">
+                <header class="ins-rev-head">
+                  <div class="ins-rev-stars" aria-label="5 out of 5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span class="ins-rev-date">Mar 22, 2026</span>
+                </header>
+                <p class="ins-rev-text">Quick checkout, clean panel, no nonsense.</p>
+                <footer class="ins-rev-foot">
+                  <span class="ins-rev-product">Fortnite External (1 Day key)</span
+                  ><span class="ins-rev-verified"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12.01 2.011a3.2 3.2 0 0 1 2.113.797l.154.145l.698.698a1.2 1.2 0 0 0 .71.341L15.82 4h1a3.2 3.2 0 0 1 3.195 3.018l.005.182v1c0 .27.092.533.258.743l.09.1l.697.698a3.2 3.2 0 0 1 .147 4.382l-.145.154l-.698.698a1.2 1.2 0 0 0-.341.71l-.008.135v1a3.2 3.2 0 0 1-3.018 3.195l-.182.005h-1a1.2 1.2 0 0 0-.743.258l-.1.09l-.698.697a3.2 3.2 0 0 1-4.382.147l-.154-.145l-.698-.698a1.2 1.2 0 0 0-.71-.341L8.2 20.02h-1a3.2 3.2 0 0 1-3.195-3.018L4 16.82v-1a1.2 1.2 0 0 0-.258-.743l-.09-.1l-.697-.698a3.2 3.2 0 0 1-.147-4.382l.145-.154l.698-.698a1.2 1.2 0 0 0 .341-.71L4 8.2v-1l.005-.182a3.2 3.2 0 0 1 3.013-3.013L7.2 4h1a1.2 1.2 0 0 0 .743-.258l.1-.09l.698-.697a3.2 3.2 0 0 1 2.269-.944m3.697 7.282a1 1 0 0 0-1.414 0L11 12.585l-1.293-1.292l-.094-.083a1 1 0 0 0-1.32 1.497l2 2l.094.083a1 1 0 0 0 1.32-.083l4-4l.083-.094a1 1 0 0 0-.083-1.32"
+                      ></path></svg
+                    >Verified</span
+                  >
+                </footer>
+              </article>
+              <article class="ins-rev-card">
+                <header class="ins-rev-head">
+                  <div class="ins-rev-stars" aria-label="5 out of 5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span class="ins-rev-date">Mar 18, 2026</span>
+                </header>
+                <p class="ins-rev-text">Updates land fast after every patch. Worth the price.</p>
+                <footer class="ins-rev-foot">
+                  <span class="ins-rev-product">Exodus External (1 Day key)</span
+                  ><span class="ins-rev-verified"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12.01 2.011a3.2 3.2 0 0 1 2.113.797l.154.145l.698.698a1.2 1.2 0 0 0 .71.341L15.82 4h1a3.2 3.2 0 0 1 3.195 3.018l.005.182v1c0 .27.092.533.258.743l.09.1l.697.698a3.2 3.2 0 0 1 .147 4.382l-.145.154l-.698.698a1.2 1.2 0 0 0-.341.71l-.008.135v1a3.2 3.2 0 0 1-3.018 3.195l-.182.005h-1a1.2 1.2 0 0 0-.743.258l-.1.09l-.698.697a3.2 3.2 0 0 1-4.382.147l-.154-.145l-.698-.698a1.2 1.2 0 0 0-.71-.341L8.2 20.02h-1a3.2 3.2 0 0 1-3.195-3.018L4 16.82v-1a1.2 1.2 0 0 0-.258-.743l-.09-.1l-.697-.698a3.2 3.2 0 0 1-.147-4.382l.145-.154l.698-.698a1.2 1.2 0 0 0 .341-.71L4 8.2v-1l.005-.182a3.2 3.2 0 0 1 3.013-3.013L7.2 4h1a1.2 1.2 0 0 0 .743-.258l.1-.09l.698-.697a3.2 3.2 0 0 1 2.269-.944m3.697 7.282a1 1 0 0 0-1.414 0L11 12.585l-1.293-1.292l-.094-.083a1 1 0 0 0-1.32 1.497l2 2l.094.083a1 1 0 0 0 1.32-.083l4-4l.083-.094a1 1 0 0 0-.083-1.32"
+                      ></path></svg
+                    >Verified</span
+                  >
+                </footer>
+              </article>
+              <article class="ins-rev-card">
+                <header class="ins-rev-head">
+                  <div class="ins-rev-stars" aria-label="5 out of 5">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path></svg
+                    ><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="is-on">
+                      <path
+                        fill="currentColor"
+                        d="m8.243 7.34l-6.38.925l-.113.023a1 1 0 0 0-.44 1.684l4.622 4.499l-1.09 6.355l-.013.11a1 1 0 0 0 1.464.944l5.706-3l5.693 3l.1.046a1 1 0 0 0 1.352-1.1l-1.091-6.355l4.624-4.5l.078-.085a1 1 0 0 0-.633-1.62l-6.38-.926l-2.852-5.78a1 1 0 0 0-1.794 0z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <span class="ins-rev-date">Mar 12, 2026</span>
+                </header>
+                <p class="ins-rev-text">10/10 will renew.</p>
+                <footer class="ins-rev-foot">
+                  <span class="ins-rev-product">Rust Internal (1 Day key)</span
+                  ><span class="ins-rev-verified"
+                    ><svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="12"
+                      height="12"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M12.01 2.011a3.2 3.2 0 0 1 2.113.797l.154.145l.698.698a1.2 1.2 0 0 0 .71.341L15.82 4h1a3.2 3.2 0 0 1 3.195 3.018l.005.182v1c0 .27.092.533.258.743l.09.1l.697.698a3.2 3.2 0 0 1 .147 4.382l-.145.154l-.698.698a1.2 1.2 0 0 0-.341.71l-.008.135v1a3.2 3.2 0 0 1-3.018 3.195l-.182.005h-1a1.2 1.2 0 0 0-.743.258l-.1.09l-.698.697a3.2 3.2 0 0 1-4.382.147l-.154-.145l-.698-.698a1.2 1.2 0 0 0-.71-.341L8.2 20.02h-1a3.2 3.2 0 0 1-3.195-3.018L4 16.82v-1a1.2 1.2 0 0 0-.258-.743l-.09-.1l-.697-.698a3.2 3.2 0 0 1-.147-4.382l.145-.154l.698-.698a1.2 1.2 0 0 0 .341-.71L4 8.2v-1l.005-.182a3.2 3.2 0 0 1 3.013-3.013L7.2 4h1a1.2 1.2 0 0 0 .743-.258l.1-.09l.698-.697a3.2 3.2 0 0 1 2.269-.944m3.697 7.282a1 1 0 0 0-1.414 0L11 12.585l-1.293-1.292l-.094-.083a1 1 0 0 0-1.32 1.497l2 2l.094.083a1 1 0 0 0 1.32-.083l4-4l.083-.094a1 1 0 0 0-.083-1.32"
+                      ></path></svg
+                    >Verified</span
+                  >
+                </footer>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="py-20 faq component" id="faq" style="position: relative; overflow: visible">
+        <div class="glow-top-right"></div>
+        <div class="glow-center"></div>
+        <div
+          style="
+            max-width: 800px;
+            margin: 0px auto;
+            padding: 0px 1.5rem;
+            position: relative;
+            z-index: 1;
+          "
+        >
+          <div
+            data-aos="fade-up"
+            class="aos-init"
+            style="text-align: center; margin-bottom: 2.5rem"
+          >
+            <div
+              style="
+                display: inline-flex;
+                align-items: center;
+                gap: 0.4rem;
+                padding: 0.3rem 0.8rem;
+                margin-bottom: 0.75rem;
+                background: rgba(192, 38, 211, 0.08);
+                border: 1px solid rgba(192, 38, 211, 0.18);
+                border-radius: 9999px;
+                font-size: 0.75rem;
+                color: rgb(192, 38, 211);
+                font-weight: 500;
+              "
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="12"
+                height="12"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              >
+                <circle cx="12" cy="12" r="10"></circle>
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"></path>
+                <line x1="12" y1="17" x2="12.01" y2="17"></line></svg
+              ><span>FAQ</span>
+            </div>
+            <h2
+              class="ins-section-title"
+              style="
+                color: rgb(255, 255, 255);
+                margin: 0px 0px 0.4rem;
+                line-height: 1.2;
+                letter-spacing: -0.01em;
+                text-align: center;
+              "
+            >
+              Frequently Asked Questions
+            </h2>
+            <p
+              style="
+                font-size: 0.8rem;
+                color: rgba(255, 255, 255, 0.45);
+                max-width: 550px;
+                margin: 0px auto;
+                line-height: 1.6;
+                text-align: center;
+              "
+            >
+              Get answers to common questions
+            </p>
+          </div>
+          <div class="ux-faq-list aos-init" data-aos="fade-up" data-aos-delay="100">
+            <div class="ux-faq-item">
+              <button class="ux-faq-question" type="button" aria-expanded="true">
+                <span>What hardware do you support?</span
+                ><svg
+                  class="ux-faq-chevron"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  style="transform: rotate(180deg); transition: transform 0.3s"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="ux-faq-collapse" style="height: 0px">
+                <div class="ux-faq-answer">
+                  <span style="white-space: pre-line"
+                    >This varies depending on the software you are using. Please refer to the
+                    product page for more information.</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="ux-faq-item">
+              <button class="ux-faq-question" type="button" aria-expanded="false">
+                <span>What payment methods do you support?</span
+                ><svg
+                  class="ux-faq-chevron"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  style="transform: none; transition: transform 0.3s"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="ux-faq-collapse" style="height: 0px">
+                <div class="ux-faq-answer">
+                  <span style="white-space: pre-line"
+                    >We accept cryptocurrency and all major credit cards. Card payments are
+                    processed securely through Stripe.</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="ux-faq-item">
+              <button class="ux-faq-question" type="button" aria-expanded="false">
+                <span>What operating systems do you support?</span
+                ><svg
+                  class="ux-faq-chevron"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  style="transform: none; transition: transform 0.3s"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="ux-faq-collapse" style="height: 0px">
+                <div class="ux-faq-answer">
+                  <span style="white-space: pre-line"
+                    >This varies depending on the software you are using. Please refer to the
+                    product page for more information.</span
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="ux-faq-item">
+              <button class="ux-faq-question" type="button" aria-expanded="false">
+                <span>My question isn't listed here, what do I do?</span
+                ><svg
+                  class="ux-faq-chevron"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  style="transform: none; transition: transform 0.3s"
+                >
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </button>
+              <div class="ux-faq-collapse" style="height: 0px">
+                <div class="ux-faq-answer">
+                  <span style="white-space: pre-line"
+                    >If you require further support, you can contact us in the "Support"
+                    section.</span
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="footer component ux-footer" id="contact">
+        <div class="ux-footer-glow-left"></div>
+        <div class="ux-footer-glow-right"></div>
+        <div class="container" style="position: relative; z-index: 1">
+          <div class="ux-footer-payments-wrap">
+            <div class="ux-footer-payments" aria-label="Accepted payment methods">
+              <img alt="Visa" src="/assets/payments/visa.svg" /><img
+                alt="Mastercard"
+                src="/assets/payments/mastercard.svg"
+              /><img alt="PayPal" src="/assets/payments/paypal.svg" /><img
+                alt="Apple Pay"
+                src="/assets/payments/applepay.svg"
+              /><img alt="Cash App" src="/assets/payments/cashapp.svg" /><span
+                class="ux-footer-payments-coins"
+                ><img alt="Bitcoin" src="/assets/payments/bitcoin.svg" /><img
+                  alt="Litecoin"
+                  src="/assets/payments/litecoin.svg"
+              /></span>
+            </div>
+          </div>
+          <div class="ux-footer-grid">
+            <div class="ux-footer-brand" style="align-items: flex-start; gap: 0.75rem">
+              <a href="/" style="display: inline-block; margin-left: 1rem; margin-top: 0.5rem"
+                ><img
+                  alt="Sulphated"
+                  src="/assets/insert-mark.svg"
+                  style="height: 48px; width: auto; display: block"
+              /></a>
+              <p
+                style="
+                  color: rgba(255, 255, 255, 0.45);
+                  font-size: 0.82rem;
+                  line-height: 1.55;
+                  margin: 0px 0px 0px 1rem;
+                  max-width: 260px;
+                "
+              >
+                Sulphated provides the best products on the market at a low price and with fast
+                support.
+              </p>
+              <div class="ux-visitors-pill">
+                <span class="ux-visitors-dot" aria-hidden="true"
+                  ><span class="ux-visitors-dot-ping"></span
+                  ><span class="ux-visitors-dot-core"></span></span
+                ><span class="ux-visitors-text"><strong>55</strong> Visitors Online</span>
+              </div>
+            </div>
+            <div class="ux-footer-links-group">
+              <div class="ux-footer-col">
+                <h3>Navigation</h3>
+                <ul>
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/#products">Products</a></li>
+                  <li><a href="/#reviews">Reviews</a></li>
+                  <li><a href="/status">Status</a></li>
+                </ul>
+              </div>
+              <div class="ux-footer-col">
+                <h3>Support</h3>
+                <ul>
+                  <li><a href="/terms">Terms of Service</a></li>
+                  <li><a href="/refund-policy">Refund Policy</a></li>
+                  <li><a href="/privacy-policy">Privacy Policy</a></li>
+                </ul>
+              </div>
+              <div class="ux-footer-col">
+                <h3>Popular Products</h3>
+                <ul>
+                  <li><a href="/product?id=fn">Fortnite Private</a></li>
+                  <li><a href="/product?id=r6-lite">R6 Lite</a></li>
+                  <li><a href="/product?id=r6-pro">R6 Pro</a></li>
+                  <li><a href="/product?id=arc-raiders-public">Arc Raiders Public</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="ux-footer-bottom">
+            <div class="ux-footer-status" aria-label="System status">
+              <span class="ux-footer-status-dot"
+                ><span class="ux-footer-status-ping"></span
+                ><span class="ux-footer-status-core"></span></span
+              ><span class="ux-footer-status-text">All Systems Operational</span>
+            </div>
+            <p style="font-size: 0.72rem">
+              Copyright © 2026. All Rights Reserved.<span style="opacity: 0.35; margin: 0px 0.4rem"
+                >|</span
+              ><span style="opacity: 0.5">made by discord vivaol</span>
+            </p>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <div id="cart-overlay" class="cart-overlay" hidden></div>
+    <aside
+      id="cart-drawer"
+      class="fixed top-0 right-0 h-full w-full sm:w-[420px] bg-theme-primary border-l border-theme shadow-2xl flex flex-col z-[9999] cart-slide-animate"
+      hidden
+    >
+      <div class="flex items-center justify-between p-6 border-b border-theme">
+        <h2 class="text-theme-primary text-lg heading-semibold">
+          Shopping Cart
+          <span id="cart-count" class="text-theme-secondary text-sm font-normal">(0 Items)</span>
+        </h2>
+        <button
+          type="button"
+          data-close-cart
+          class="inline-flex items-center justify-center text-white h-8 w-8 rounded-md hover:bg-white/10"
+          aria-label="Close"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M18 6 6 18" />
+            <path d="m6 6 12 12" />
+          </svg>
+        </button>
+      </div>
+      <div id="cart-body" class="flex-1 overflow-y-auto px-6 mt-6"></div>
+      <div id="cart-foot" class="cart-foot" hidden>
+        <div class="flex justify-between text-white mb-3">
+          <span>Total</span><strong id="cart-total">€0.00</strong>
+        </div>
+        <button
+          type="button"
+          data-close-cart
+          class="dp-pp-buy inline-flex items-center justify-center w-full"
+        >
+          Continue Shopping
+        </button>
+      </div>
+    </aside>
+    <script src="/js/site.js"></script>
+  </body>
+</html>
