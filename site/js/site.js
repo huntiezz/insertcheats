@@ -166,13 +166,14 @@ document.addEventListener("click", (event) => {
     wrap.querySelector(".search-pop")?.classList.toggle("is-open");
     wrap.querySelector("input")?.focus();
   }
-  if (t.querySelector?.(".lucide-menu")) {
+  if (t.matches("[data-mobile-menu-toggle]")) {
+    event.preventDefault();
     const menu = document.getElementById("mobile-menu");
-    const btn = t.closest("button");
-    const open = !menu?.classList.contains("is-open");
-    menu?.classList.toggle("is-open", open);
-    btn?.classList.toggle("is-menu-open", open);
-    if (!open) btn?.blur();
+    setMobileMenuOpen(!menu?.classList.contains("is-open"));
+  }
+  if (t.matches("[data-mobile-menu-close]")) {
+    event.preventDefault();
+    setMobileMenuOpen(false);
   }
   if (t.classList.contains("ux-faq-question")) {
     const item = t.closest(".ux-faq-item");
@@ -233,16 +234,58 @@ document.addEventListener("click", (event) => {
 
 overlay?.addEventListener("click", closeCart);
 
-function closeMobileMenu() {
-  document.getElementById("mobile-menu")?.classList.remove("is-open");
-  document
-    .querySelector("#header button.is-menu-open")
-    ?.classList.remove("is-menu-open");
+function setMobileMenuOpen(open) {
+  const menu = document.getElementById("mobile-menu");
+  const toggle = document.querySelector("[data-mobile-menu-toggle]");
+  const backdrop = document.getElementById("mobile-menu-backdrop");
+  menu?.classList.toggle("is-open", open);
+  backdrop?.classList.toggle("is-open", open);
+  toggle?.classList.toggle("is-menu-open", open);
+  toggle?.setAttribute("aria-expanded", open ? "true" : "false");
+  toggle?.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  document.body.classList.toggle("mobile-menu-open", open);
+  if (!open) toggle?.blur();
 }
 
-document.querySelectorAll("#mobile-menu a").forEach((link) => {
-  link.addEventListener("click", closeMobileMenu);
-});
+function closeMobileMenu() {
+  setMobileMenuOpen(false);
+}
+
+function initMobileMenu() {
+  const menu = document.getElementById("mobile-menu");
+  const toggle = document.querySelector(
+    "#header .ins-mobile-toolbar button:has(.lucide-menu)",
+  );
+  if (!menu || !toggle || toggle.dataset.mobileMenuToggle != null) return;
+
+  toggle.dataset.mobileMenuToggle = "";
+  toggle.setAttribute("type", "button");
+  toggle.setAttribute("aria-controls", "mobile-menu");
+  toggle.setAttribute("aria-expanded", "false");
+  toggle.setAttribute("aria-label", "Open menu");
+
+  if (!document.getElementById("mobile-menu-backdrop")) {
+    const backdrop = document.createElement("div");
+    backdrop.id = "mobile-menu-backdrop";
+    backdrop.className = "mobile-menu-backdrop";
+    backdrop.addEventListener("click", closeMobileMenu);
+    document.body.appendChild(backdrop);
+  }
+
+  if (!menu.querySelector("[data-mobile-menu-close]")) {
+    const head = document.createElement("div");
+    head.className = "mobile-menu-head";
+    head.innerHTML =
+      '<span class="mobile-menu-title">Menu</span><button type="button" class="mobile-menu-close" data-mobile-menu-close aria-label="Close menu"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg></button>';
+    menu.insertBefore(head, menu.firstChild);
+  }
+
+  menu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", closeMobileMenu);
+  });
+}
+
+initMobileMenu();
 
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
