@@ -1,0 +1,20 @@
+{
+  "name": "insertcheats",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve site -l 4173",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "playwright": "^1.64.0"
+  },
+  "devDependencies": {
+    "serve": "^14.2.6"
+  }
+}

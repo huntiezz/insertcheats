@@ -1,0 +1,124 @@
+.ins-magic-footer {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 0 !important;
+  background: #08090b;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.ins-magic-footer .container {
+  position: relative;
+  z-index: 2;
+}
+
+.ins-magic-footer .ux-footer-grid {
+  align-items: flex-start;
+  padding: 2.5rem 0 1.5rem;
+  gap: 2rem;
+}
+
+.ins-magic-footer-brand .ins-magic-footer-logo-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  margin-left: 1rem;
+  margin-top: 0.25rem;
+  text-decoration: none;
+}
+
+.ins-magic-footer-wordmark {
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: #f4f6f8;
+}
+
+.ins-magic-footer .ux-footer-brand img {
+  height: 32px !important;
+  width: auto !important;
+  filter: none !important;
+  margin: 0 !important;
+}
+
+.ins-magic-footer .ux-footer-col h3 {
+  color: #f4f6f8;
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 0.85rem;
+}
+
+.ins-magic-footer .ux-footer-col ul li a {
+  color: rgba(255, 255, 255, 0.52);
+  font-size: 0.84rem;
+}
+
+.ins-magic-footer .ux-footer-col ul li a:hover {
+  color: rgba(255, 255, 255, 0.88);
+}
+
+.ins-magic-footer-watermark {
+  position: relative;
+  width: calc(100% - 2.5rem);
+  max-width: 72rem;
+  height: 10rem;
+  margin: 2.5rem auto 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  background: transparent;
+  border-radius: 0;
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    #000 6%,
+    #000 94%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    #000 6%,
+    #000 94%,
+    transparent 100%
+  );
+}
+
+@media (min-width: 768px) {
+  .ins-magic-footer-watermark {
+    width: calc(100% - 3rem);
+    height: 12rem;
+    margin-top: 3rem;
+  }
+}
+
+.ins-magic-footer-watermark-fade {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  background: linear-gradient(to bottom, #08090b 0%, transparent 48%);
+  border-radius: inherit;
+}
+
+.ins-magic-footer-flicker,
+#ux-footer-flicker {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.ins-magic-footer .ux-footer-bottom {
+  position: relative;
+  z-index: 3;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 1rem 0 1.25rem;
+  margin-top: 0;
+}
+
+.ins-magic-footer .ux-footer-payments-wrap {
+  display: none;
+}
+
+.ins-magic-footer .ux-visitors-pill {
+  margin-left: 1rem;
+}

@@ -4,49 +4,35 @@ const PRODUCTS = [
     name: "Fortnite Private",
     cat: "Fortnite",
     price: "€10.99",
-    image: "/assets/img/4c9d1361-65ad-4fe0-a764-57be6b8a2421.png",
+    image: "/assets/img/fortnite.png",
   },
   {
-    id: "r6-lite",
-    name: "R6 Lite",
-    cat: "Rainbow Six Seige",
+    id: "hwid-spoofer",
+    name: "HWID Spoofer",
+    cat: "Spoofer",
+    price: "€6.00",
+    image: "/assets/img/hwid-spoofer.png",
+  },
+  {
+    id: "valorant",
+    name: "Valorant",
+    cat: "Valorant",
     price: "€9.99",
-    image: "/assets/img/8720e6ca-8a57-4778-8058-c3dcd9cb3e89.png",
+    image: "/assets/img/valorant.png",
   },
   {
-    id: "r6-pro",
-    name: "R6 Pro",
-    cat: "Rainbow Six Seige",
-    price: "€6.00",
-    image: "/assets/img/0065a681-89a2-4360-8e33-eb5293eb0f16.png",
-  },
-  {
-    id: "arc-raiders-public",
-    name: "Arc Raiders Public",
-    cat: "Arc Raiders",
-    price: "€5.00",
-    image: "/assets/img/f95b2b38-c65c-414c-9bf5-27fbbedf684b.png",
-  },
-  {
-    id: "rust-private",
-    name: "Rust Private",
-    cat: "Rust",
+    id: "bo7",
+    name: "Black Ops 7",
+    cat: "Black Ops 7",
     price: "€6.99",
-    image: "/assets/img/0e6ce96a-b687-4267-b642-36cef1f46e9d.png",
+    image: "/assets/img/call-of-duty.png",
   },
   {
-    id: "sulphated-temp",
-    name: "Sulphated Temp",
-    cat: "Spoofer",
-    price: "€6.00",
-    image: "/assets/img/2a7c3f97-bb55-4cb3-b3e6-ab56aef9cd22.png",
-  },
-  {
-    id: "sulphated-perm",
-    name: "Sulphated Perm",
-    cat: "Spoofer",
-    price: "€25.00",
-    image: "/assets/img/2a7c3f97-bb55-4cb3-b3e6-ab56aef9cd22.png",
+    id: "eac-emulator",
+    name: "EAC Emulator",
+    cat: "EAC Emulator",
+    price: "€14.99",
+    image: "/assets/img/eac-emulator.png",
   },
 ];
 
@@ -54,36 +40,56 @@ const CAT_IDS = {
   "02992494-2501-4838-9126-5312c53f49e6": "Fortnite",
   "a848f2a0-5252-4a52-910c-bd0b5b6a1654": "Spoofer",
   "5766ae29-f9bc-457e-bcb6-647b52dba2e1": "Valorant",
-  "d9f4aa93-1eca-44e3-8bc4-21be9d468f83": "Rainbow Six Seige",
   "89363b01-735c-4bc4-8241-310bf21c9694": "Black Ops 7",
-  "72aa29e6-6c59-4a9f-86ac-bd4d514baab9": "Arc Raiders",
-  "35b4d23e-f40e-411f-bd64-0f9899b833c0": "Rust",
-  "0ec094b7-b4be-4816-a6f6-45f4c28b37ed": "Apex Legends",
+  "eac-emulator": "EAC Emulator",
 };
 
 const header = document.getElementById("header");
+let navCompact = false;
 function onScroll() {
   if (!header) return;
-  const scrolled = window.scrollY > 24;
-  header.classList.toggle("at-top", !scrolled);
-  header.classList.toggle("is-scrolled", scrolled);
+  const y = window.scrollY;
+  if (!navCompact && y > 56) navCompact = true;
+  else if (navCompact && y < 20) navCompact = false;
+  header.classList.toggle("at-top", !navCompact);
+  header.classList.toggle("is-scrolled", navCompact);
 }
 onScroll();
 window.addEventListener("scroll", onScroll, { passive: true });
 
+function revealAosElement(el) {
+  el.classList.add("aos-animate");
+}
+
+function isElementInViewport(el) {
+  const rect = el.getBoundingClientRect();
+  return rect.bottom > 0 && rect.top < window.innerHeight;
+}
+
 document.querySelectorAll("[data-aos]").forEach((el) => {
+  if (isElementInViewport(el)) {
+    revealAosElement(el);
+    return;
+  }
+
   const io = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          el.classList.add("aos-animate");
+          revealAosElement(el);
           io.disconnect();
         }
       });
     },
-    { threshold: 0.15 },
+    { threshold: 0.05, rootMargin: "0px 0px 8% 0px" },
   );
   io.observe(el);
+});
+
+requestAnimationFrame(() => {
+  document.querySelectorAll("[data-aos]:not(.aos-animate)").forEach((el) => {
+    if (isElementInViewport(el)) revealAosElement(el);
+  });
 });
 
 function cart() {
@@ -98,7 +104,10 @@ function saveCart(items) {
   renderCart();
 }
 function money(items) {
-  const n = items.reduce((sum, item) => sum + Number(item.price.replace("€", "")), 0);
+  const n = items.reduce(
+    (sum, item) => sum + Number(item.price.replace("€", "")),
+    0,
+  );
   return "€" + n.toFixed(2);
 }
 
@@ -118,7 +127,8 @@ function renderCart() {
   const count = document.getElementById("cart-count");
   const body = document.getElementById("cart-body");
   const foot = document.getElementById("cart-foot");
-  if (count) count.textContent = `(${items.length} Item${items.length === 1 ? "" : "s"})`;
+  if (count)
+    count.textContent = `(${items.length} Item${items.length === 1 ? "" : "s"})`;
   if (!body) return;
   if (!items.length) {
     body.innerHTML = `<div class="flex flex-col items-center justify-center py-12 text-center h-full"><div class="w-16 h-16 bg-gray-100 dark:bg-white/5 rounded-full flex items-center justify-center mb-6"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-8 h-8 text-gray-400"><circle cx="8" cy="21" r="1"></circle><circle cx="19" cy="21" r="1"></circle><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"></path></svg></div><h3 class="text-theme-primary text-xl font-semibold mb-2">Your cart is empty</h3><p class="text-theme-secondary text-base mb-8 max-w-xs">Looks like you haven't added anything to your cart yet.</p><button type="button" data-close-cart class="inline-flex items-center justify-center py-2 bg-transparent border border-gray-300 dark:border-white/20 text-white hover:bg-white/10 h-10 px-6 text-sm rounded-md font-medium">Continue Shopping</button></div>`;
@@ -138,7 +148,10 @@ function renderCart() {
 document.addEventListener("click", (event) => {
   const t = event.target.closest("button, a");
   if (!t) return;
-  if (t.matches("[data-open-cart]") || t.querySelector?.(".lucide-shopping-cart")) {
+  if (
+    t.matches("[data-open-cart]") ||
+    t.querySelector?.(".lucide-shopping-cart")
+  ) {
     event.preventDefault();
     openCart();
   }
@@ -158,18 +171,17 @@ document.addEventListener("click", (event) => {
   }
   if (t.classList.contains("ux-faq-question")) {
     const item = t.closest(".ux-faq-item");
-    const panel = item.querySelector(".ux-faq-collapse");
-    const open = item.classList.toggle("is-open");
-    t.setAttribute("aria-expanded", open ? "true" : "false");
-    panel.style.height = open ? panel.scrollHeight + "px" : "0px";
+    const willOpen = !item.classList.contains("is-open");
     document.querySelectorAll(".ux-faq-item").forEach((other) => {
       if (other !== item) {
         other.classList.remove("is-open");
-        other.querySelector(".ux-faq-question")?.setAttribute("aria-expanded", "false");
-        const p = other.querySelector(".ux-faq-collapse");
-        if (p) p.style.height = "0px";
+        other
+          .querySelector(".ux-faq-question")
+          ?.setAttribute("aria-expanded", "false");
       }
     });
+    item.classList.toggle("is-open", willOpen);
+    t.setAttribute("aria-expanded", willOpen ? "true" : "false");
   }
   if (
     t.classList.contains("dp-pp-variant") &&
@@ -205,7 +217,9 @@ document.addEventListener("click", (event) => {
       .forEach((tab) => tab.classList.toggle("is-active", tab === t));
     applyCategory(t.dataset.cat || t.textContent.trim());
     const url = new URL(location.href);
-    const entry = Object.entries(CAT_IDS).find(([, name]) => name === t.textContent.trim());
+    const entry = Object.entries(CAT_IDS).find(
+      ([, name]) => name === t.textContent.trim(),
+    );
     if (entry) url.searchParams.set("id", entry[0]);
     else url.searchParams.delete("id");
     history.replaceState(null, "", url.pathname + url.search);
@@ -226,8 +240,11 @@ document.addEventListener("keydown", (event) => {
 document.querySelectorAll("form").forEach((form) => {
   form.addEventListener("submit", (event) => {
     event.preventDefault();
-    const q = new FormData(form).get("q") || form.querySelector("input")?.value || "";
-    const hit = PRODUCTS.find((p) => p.name.toLowerCase().includes(String(q).trim().toLowerCase()));
+    const q =
+      new FormData(form).get("q") || form.querySelector("input")?.value || "";
+    const hit = PRODUCTS.find((p) =>
+      p.name.toLowerCase().includes(String(q).trim().toLowerCase()),
+    );
     if (hit) location.href = "/product?id=" + hit.id;
   });
 });
@@ -273,11 +290,17 @@ if (document.querySelector(".ins-allprod-tab")) {
 }
 
 document.querySelectorAll(".ux-faq-item").forEach((item) => {
-  const panel = item.querySelector(".ux-faq-collapse");
-  const open = item.querySelector(".ux-faq-question")?.getAttribute("aria-expanded") === "true";
+  const open =
+    item.querySelector(".ux-faq-question")?.getAttribute("aria-expanded") ===
+    "true";
   item.classList.toggle("is-open", open);
-  if (panel) panel.style.height = open ? "auto" : "0px";
 });
+const faqList = document.querySelector(".ux-faq-list");
+if (faqList) {
+  requestAnimationFrame(() => {
+    faqList.classList.add("is-interactive");
+  });
+}
 
 const visitors = document.querySelector(".ux-visitors-text strong");
 if (visitors) {
@@ -290,6 +313,162 @@ if (visitors) {
 }
 
 renderCart();
-document.querySelectorAll("#navbar-buttons button, .flex.md\\:hidden button").forEach((button) => {
-  if (button.querySelector(".lucide-shopping-cart")) button.dataset.openCart = "";
-});
+document
+  .querySelectorAll("#navbar-buttons button, .flex.md\\:hidden button")
+  .forEach((button) => {
+    if (button.querySelector(".lucide-shopping-cart"))
+      button.dataset.openCart = "";
+  });
+
+const MAGIC_GLOBE_MARKERS = [
+  { location: [14.5995, 120.9842], size: 0.03 },
+  { location: [19.076, 72.8777], size: 0.1 },
+  { location: [23.8103, 90.4125], size: 0.05 },
+  { location: [30.0444, 31.2357], size: 0.07 },
+  { location: [39.9042, 116.4074], size: 0.08 },
+  { location: [-23.5505, -46.6333], size: 0.1 },
+  { location: [19.4326, -99.1332], size: 0.1 },
+  { location: [40.7128, -74.006], size: 0.1 },
+  { location: [34.6937, 135.5022], size: 0.05 },
+  { location: [41.0082, 28.9784], size: 0.06 },
+];
+
+function showGlobeFallback(container) {
+  container.innerHTML =
+    '<img alt="Customers around the world" src="/assets/ui/customers-world.png" width="200" height="200" />';
+}
+
+async function initCobeGlobe() {
+  const canvas = document.getElementById("ux-f-globe-canvas");
+  const mount = document.querySelector(".ins-magic-globe-mount");
+  const container = canvas?.closest(".ux-f-globe");
+  if (!canvas || !mount || !container) return;
+
+  let createGlobe;
+  try {
+    ({ default: createGlobe } = await import("/js/cobe.bundle.js"));
+  } catch {
+    showGlobeFallback(container);
+    return;
+  }
+
+  const isDark = document.documentElement.classList.contains("dark");
+  const dpr = 2;
+  let phi = 0;
+  let dragOffset = 0;
+  let pointerX = null;
+  let globe = null;
+
+  function layoutSize() {
+    const layout = Math.max(1, Math.round(mount.offsetWidth));
+    const px = layout * dpr;
+    canvas.width = px;
+    canvas.height = px;
+    canvas.style.width = `${layout}px`;
+    canvas.style.height = `${layout}px`;
+    return { layout, px };
+  }
+
+  function globeConfig(px) {
+    return {
+      devicePixelRatio: dpr,
+      width: px,
+      height: px,
+      phi: 0,
+      theta: 0.3,
+      dark: isDark ? 1 : 0,
+      diffuse: isDark ? 0.82 : 0.55,
+      mapSamples: 16000,
+      mapBrightness: isDark ? 2.35 : 1.35,
+      baseColor: isDark ? [0.62, 0.66, 0.72] : [1, 1, 1],
+      markerColor: isDark
+        ? [0.92, 0.94, 0.98]
+        : [251 / 255, 100 / 255, 21 / 255],
+      glowColor: isDark ? [0.52, 0.56, 0.62] : [1, 1, 1],
+      markers: MAGIC_GLOBE_MARKERS,
+      onRender: (state) => {
+        if (pointerX === null) phi += 0.005;
+        state.phi = phi + dragOffset;
+        state.width = cachedPx;
+        state.height = cachedPx;
+      },
+    };
+  }
+
+  let { px: cachedPx } = layoutSize();
+  globe = createGlobe(canvas, globeConfig(cachedPx));
+  requestAnimationFrame(() => canvas.classList.add("is-ready"));
+
+  function setPointer(x) {
+    if (pointerX === null) return;
+    const delta = x - pointerX;
+    pointerX = x;
+    dragOffset += delta / 1400;
+  }
+
+  function endPointer() {
+    pointerX = null;
+    canvas.classList.remove("is-dragging");
+  }
+
+  canvas.addEventListener("pointerdown", (event) => {
+    pointerX = event.clientX;
+    canvas.classList.add("is-dragging");
+  });
+  canvas.addEventListener("pointerup", endPointer);
+  canvas.addEventListener("pointerout", endPointer);
+  canvas.addEventListener("pointercancel", endPointer);
+  canvas.addEventListener("mousemove", (event) => setPointer(event.clientX));
+  canvas.addEventListener(
+    "touchmove",
+    (event) => {
+      if (event.touches[0]) setPointer(event.touches[0].clientX);
+    },
+    { passive: true },
+  );
+
+  const ro = new ResizeObserver(() => {
+    cachedPx = layoutSize().px;
+  });
+  ro.observe(mount);
+
+  return () => {
+    ro.disconnect();
+    globe?.destroy?.();
+  };
+}
+
+initCobeGlobe();
+
+function initMagicShield() {
+  const mount = window.mountFlickeringGrid;
+  const host = document.querySelector(".ins-shield-flicker");
+  if (!mount || !host) return;
+
+  mount(host, {
+    squareSize: 2,
+    gridGap: 4,
+    maxOpacity: 0.5,
+  });
+}
+
+function initFooterWatermark() {
+  const mount = window.mountFlickeringGrid;
+  const host = document.getElementById("ux-footer-flicker");
+  if (!mount || !host) return;
+
+  const narrow = window.matchMedia("(max-width: 767px)").matches;
+  mount(host, {
+    text: "Sulphated",
+    fontSize: narrow ? 64 : 88,
+    fontWeight: 600,
+    squareSize: 2,
+    gridGap: narrow ? 2 : 3,
+    flickerChance: 0.1,
+    color: "#9CA3AF",
+    maxOpacity: 0.38,
+  });
+}
+
+initMagicShield();
+initFooterWatermark();
