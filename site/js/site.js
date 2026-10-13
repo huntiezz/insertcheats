@@ -167,7 +167,12 @@ document.addEventListener("click", (event) => {
     wrap.querySelector("input")?.focus();
   }
   if (t.querySelector?.(".lucide-menu")) {
-    document.getElementById("mobile-menu")?.classList.toggle("is-open");
+    const menu = document.getElementById("mobile-menu");
+    const btn = t.closest("button");
+    const open = !menu?.classList.contains("is-open");
+    menu?.classList.toggle("is-open", open);
+    btn?.classList.toggle("is-menu-open", open);
+    if (!open) btn?.blur();
   }
   if (t.classList.contains("ux-faq-question")) {
     const item = t.closest(".ux-faq-item");
@@ -227,13 +232,25 @@ document.addEventListener("click", (event) => {
 });
 
 overlay?.addEventListener("click", closeCart);
+
+function closeMobileMenu() {
+  document.getElementById("mobile-menu")?.classList.remove("is-open");
+  document
+    .querySelector("#header button.is-menu-open")
+    ?.classList.remove("is-menu-open");
+}
+
+document.querySelectorAll("#mobile-menu a").forEach((link) => {
+  link.addEventListener("click", closeMobileMenu);
+});
+
 document.addEventListener("keydown", (event) => {
   if (event.key === "Escape") {
     closeCart();
     document
       .querySelectorAll(".search-pop.is-open")
       .forEach((el) => el.classList.remove("is-open"));
-    document.getElementById("mobile-menu")?.classList.remove("is-open");
+    closeMobileMenu();
   }
 });
 
